@@ -9,7 +9,7 @@ document.querySelectorAll('.skill-tag.has-logo img').forEach((img) => {
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
-const currentTheme = localStorage.getItem('theme') || 'light';
+const currentTheme = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', currentTheme);
 
 themeToggle.addEventListener('click', () => {
