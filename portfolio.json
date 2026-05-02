@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "name": "Sangamesh Girish Dandin",
+    "displayName": "Sangamesh Dandin",
+    "tagline": "AI Engineer. Security Researcher. Builder.",
+    "subtitle": "I build intelligent systems that find, fight, and fix threats — where machine learning meets offensive security.",
+    "location": "Dublin, Ireland",
+    "email": "sangameshs2003@gmail.com",
+    "resumeFile": "Sangamesh_Dandin_Resume.pdf",
+    "availableForWork": true,
+    "availabilityText": "Open to internships from Sept 2026"
+  },
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/Sangamesh-dev", "icon": "github" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/sangamesh-girish-dandin-553b45247/", "icon": "linkedin" },
+    { "label": "Bugcrowd", "url": "https://bugcrowd.com/n0xvector", "icon": "bugcrowd" },
+    { "label": "Email", "url": "mailto:sangameshs2003@gmail.com", "icon": "email" }
+  ],
+  "about": {
+    "paragraphs": [
+      "I'm an MSc AI student at National College of Ireland, Dublin, working at the intersection of machine learning and cybersecurity. My work focuses on building systems that are not just intelligent — but defensively aware.",
+      "From multi-LLM prompt injection defenses to malware classifiers, I ship full-stack AI products with real security applications. I hold a PNPT candidacy through TCM Security and actively hunt bugs on Bugcrowd as n0xvector.",
+      "I believe the best security tools are built by people who understand both the attack and the model. That's the space I live in."
+    ],
+    "highlights": [
+      { "value": "6+", "label": "AI Security Projects" },
+      { "value": "IEEE", "label": "Published Author" },
+      { "value": "PNPT", "label": "In Progress" },
+      { "value": "MSc AI", "label": "NCI Dublin" }
+    ]
+  },
+  "skills": [
+    {
+      "category": "AI & Machine Learning",
+      "items": ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "XGBoost", "LightGBM", "NLP", "Computer Vision", "LSTM", "SHAP", "FastAPI", "Groq API"]
+    },
+    {
+      "category": "Security Concepts",
+      "items": ["Penetration Testing", "CVE Analysis", "CVSS Scoring", "OWASP", "Active Directory", "Vulnerability Assessment", "LLM Security", "Prompt Injection"]
+    },
+    {
+      "category": "Security Tools",
+      "items": ["Kali Linux", "Metasploit", "Burp Suite", "Wireshark", "Nmap", "MITRE ATT&CK", "TryHackMe", "Bugcrowd"]
+    },
+    {
+      "category": "Dev & Cloud",
+      "items": ["React", "Docker", "Git", "AWS (EC2/S3/IAM/VPC)", "PostgreSQL", "MySQL", "Bash/Shell", "Linux", "Supabase", "Netlify"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "TriageAI",
+      "tagline": "LLM-powered SOC alert triage engine with MITRE ATT&CK mapping",
+      "description": "Ingests SIEM alerts, deduplicates via FAISS vector search, maps to MITRE ATT&CK framework, scores with Groq llama-3.3-70b-versatile, and surfaces results via a React/Vite/TailwindCSS dashboard with PDF export.",
+      "tags": ["LLM", "FAISS", "MITRE ATT&CK", "Groq", "React", "FastAPI", "Supabase"],
+      "status": "In Progress",
+      "github": "https://github.com/Sangamesh-dev",
+      "featured": false,
+      "type": "security"
+    },
+    {
+      "id": 2,
+      "name": "RedTeam Copilot AI",
+      "tagline": "Agentic pentesting assistant with 4-stage LLM pipeline",
+      "description": "Autonomous red team assistant running OSINT → Port Scan → CVE Match → Report pipeline. Generates dark-themed PDF pentest reports automatically. Built with FastAPI and Groq API.",
+      "tags": ["Agentic AI", "Red Team", "OSINT", "CVE", "FastAPI", "Groq", "PDF Reports"],
+      "status": "Completed",
+      "github": "https://github.com/Sangamesh-dev/redteam-copilot",
+      "featured": true,
+      "type": "security"
+    },
+    {
+      "id": 3,
+      "name": "ZeroInject Shield",
+      "tagline": "Multi-LLM ensemble defense against prompt injection attacks",
+      "description": "A 4-stage multi-agent prompt injection defense pipeline using consensus voting across multiple LLMs. Built with FastAPI backend, React frontend, and Groq API. Targets SaaS and small business LLM deployments.",
+      "tags": ["LLM Security", "FastAPI", "React", "Groq API", "Multi-Agent"],
+      "status": "In Progress",
+      "github": "https://github.com/Sangamesh-dev/ZeroInject",
+      "featured": true,
+      "type": "security"
+    },
+    {
+      "id": 4,
+      "name": "ByteHunter",
+      "tagline": "Dual-model malware classification with explainability",
+      "description": "Two-model pipeline using EMBER 2018 LightGBM (89.67% accuracy, 95.40% AUC) for threat scoring and XGBoost on Microsoft BIG-2015 for malware family classification. Full SHAP explainability, React/Vite/FastAPI/Docker stack.",
+      "tags": ["Malware Analysis", "LightGBM", "XGBoost", "SHAP", "Docker", "React"],
+      "status": "Completed",
+      "github": "https://github.com/Sangamesh-dev/ByteHunter",
+      "featured": true,
+      "type": "security"
+    },
+    {
+      "id": 9,
+      "name": "MailGuard AI",
+      "tagline": "Email impersonation detection with SPF/DKIM/DMARC validation",
+      "description": "Stylometric classifier trained on the Enron corpus. Chrome Extension integrates into Gmail with real-time SPF/DKIM/DMARC validation. 72% accuracy, 84% impostor precision.",
+      "tags": ["NLP", "Stylometry", "SPF/DKIM/DMARC", "Chrome Extension", "FastAPI"],
+      "status": "Completed",
+      "github": "https://github.com/Sangamesh-dev",
+      "featured": true,
+      "type": "email"
+    },
+    {
+      "id": 6,
+      "name": "ZeroTrace AI",
+      "tagline": "Threat intelligence platform with exploit prediction",
+      "description": "Full-stack cybersecurity threat intelligence platform ingesting CVE data from NVD, CISA KEV, ExploitDB. XGBoost for exploit probability, Groq API for NLP summarization, FAISS vector search, Streamlit/FastAPI/PostgreSQL/Docker.",
+      "tags": ["Threat Intelligence", "XGBoost", "FAISS", "CVE", "Docker", "Streamlit"],
+      "status": "Completed",
+      "github": "https://github.com/Sangamesh-dev",
+      "featured": false,
+      "type": "security"
+    },
+    {
+      "id": 7,
+      "name": "Predictive Patch Scheduler",
+      "tagline": "ML-driven vulnerability management & patch automation",
+      "description": "Processes 500+ CVE records with CVSS-based risk scoring, improving prioritization accuracy by ~35% over manual methods. RESTful API via FastAPI for integration with external security tools.",
+      "tags": ["Random Forest", "Gradient Boosting", "FastAPI", "CVSS", "CVE"],
+      "status": "Completed",
+      "github": "https://github.com/Sangamesh-dev/Predictive-Patch-Scheduler",
+      "featured": true,
+      "type": "security"
+    },
+    {
+      "id": 8,
+      "name": "VulnXploit Scanner",
+      "tagline": "Full-stack web vulnerability scanner with CVE matching",
+      "description": "Automated port scanning across 65,000+ ports, reducing manual assessment time by ~60%. Real-time CVE database matching and PoC exploit generation to streamline pentesting workflows.",
+      "tags": ["Python", "Flask", "Nmap", "CVE", "Penetration Testing"],
+      "status": "Completed",
+      "github": "https://github.com/Sangamesh-dev/VulnXploit",
+      "featured": true,
+      "type": "scanner"
+    }
+  ],
+  "experience": [
+    {
+      "type": "internship",
+      "role": "Data Science Intern",
+      "org": "CodeClause",
+      "location": "Remote",
+      "period": "2023",
+      "bullets": [
+        "Built Image Caption Generator using CNN + RNN with TensorFlow and NLTK",
+        "Developed Loan Status Prediction system with 5 ML models and Tkinter GUI deployment"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MSc in Artificial Intelligence",
+      "institution": "National College of Ireland",
+      "location": "Dublin, Ireland",
+      "period": "Jan 2026 – Jan 2027",
+      "note": "Expected"
+    },
+    {
+      "degree": "B.E. in AI and Data Science",
+      "institution": "Nitte Meenakshi Institute of Technology",
+      "location": "Bengaluru, India",
+      "period": "Feb 2023 – Oct 2025",
+      "note": "CGPA: 7.49 / 10"
+    },
+    {
+      "degree": "Diploma in Computer Science",
+      "institution": "N.V. Polytechnic College",
+      "location": "Kalaburagi, India",
+      "period": "Aug 2019 – Aug 2022",
+      "note": "80%"
+    }
+  ],
+  "certifications": [
+    { "name": "PNPT – Practical Network Penetration Tester", "issuer": "TCM Security", "status": "In Progress", "year": "2025" },
+    { "name": "CompTIA Network+ (N10-008)", "issuer": "CompTIA", "status": "Completed", "year": "2024" },
+    { "name": "AWS Academy – Cloud Architecting", "issuer": "Amazon Web Services", "status": "Completed", "year": "2024" },
+    { "name": "Tata Cybersecurity Analyst Job Simulation", "issuer": "Tata Group / Forage", "status": "Completed", "year": "2024" }
+  ],
+  "publication": {
+    "title": "AlertSphere: Alerting About Disasters and Ensuring Safety Using AI",
+    "authors": "Nayana B.P., K.S. Prakruthi, Ananya Rekha Ashok, Sangamesh Girish Dandin, Tanveer Akhlaque Ahmed",
+    "venue": "ICAMIDA 2025 – International Conference on Applications of Machine Intelligence and Data Analytics",
+    "location": "Aurangabad, India",
+    "date": "Aug 21–22, 2025",
+    "doi": "10.1109/ICAMIDA64673.2025.11209472",
+    "url": "https://doi.org/10.1109/ICAMIDA64673.2025.11209472"
+  },
+  "leadership": [
+    { "role": "Vice President", "org": "ACM NMIT", "period": "Jan 2024 – Jul 2025", "note": "Led 10+ workshops, 200+ participants" },
+    { "role": "Executive Committee", "org": "IEEE NMIT Student Branch", "period": "Dec 2023 – Jul 2025", "note": "Organized 6+ research seminars" },
+    { "role": "Vice Secretary", "org": "IEEE CIS NMIT", "period": "Nov 2023 – Jul 2025", "note": "Grew chapter membership by 30%" }
+  ]
+}

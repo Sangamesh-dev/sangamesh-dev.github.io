@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sangamesh Girish Dandin — AI Engineer & Security Researcher</title>
+<meta name="description" content="MSc AI student at NCI Dublin. Building intelligent systems at the intersection of machine learning and cybersecurity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-noise"></div>
+<div class="bg-grid"></div>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">S. Dandin</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+      <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.37a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="Sangamesh_Dandin_Resume.pdf" download class="nav-cta">Resume ↓</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrapper">
+  <section id="hero">
+    <div class="hero-available reveal">Open to Opportunities · 2026</div>
+    <div class="hero-label reveal reveal-delay-1">MSc AI · NCI Dublin</div>
+    <h1 class="hero-name reveal reveal-delay-2">
+      Sangamesh Girish<br><em>Dandin.</em>
+    </h1>
+    <div class="hero-typewriter reveal reveal-delay-3" id="typewriter">
+      <span class="typewriter-text"></span><span class="typewriter-cursor"></span>
+    </div>
+    <div class="credibility-strip reveal reveal-delay-3" aria-label="Credibility highlights">
+      <div class="cred-item"><span>MSc AI</span><strong>NCI Dublin</strong></div>
+      <div class="cred-item"><span>IEEE</span><strong>Published</strong></div>
+      <div class="cred-item"><span>PNPT</span><strong>Candidate</strong></div>
+      <div class="cred-item"><span>Bugcrowd</span><strong>n0xvector</strong></div>
+    </div>
+    <p class="hero-sub reveal reveal-delay-3">
+      I build intelligent systems that find, fight, and fix threats — where machine learning meets offensive security.
+    </p>
+    <div class="hero-actions reveal reveal-delay-4">
+      <a href="#projects" class="btn-primary">View Projects →</a>
+      <a href="mailto:sangameshs2003@gmail.com" class="btn-secondary btn-contact">Email Me</a>
+      <a href="Sangamesh_Dandin_Resume.pdf" download class="btn-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume
+      </a>
+    </div>
+  </section>
+  <div class="hero-scroll-hint">Scroll</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <h2>About</h2>
+    <span class="section-num">01</span>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal reveal-delay-1">
+      <p>I'm an MSc AI student at National College of Ireland, Dublin, working at the intersection of machine learning and cybersecurity. My work focuses on building systems that are not just intelligent — but defensively aware.</p>
+      <p>From multi-LLM prompt injection defenses to malware classifiers, I ship full-stack AI products with real security applications. I hold a PNPT candidacy through TCM Security and actively hunt bugs on Bugcrowd as <strong>n0xvector</strong>.</p>
+      <div class="hero-badges about-badges">
+        <div class="badge-pill badge-featured">Featured Build: TriageAI</div>
+      </div>
+      <p>I believe the best security tools are built by people who understand both the attack and the model. That's the space I live in.</p>
+      <div class="publication-card">
+        <div class="pub-label">IEEE Publication</div>
+        <div class="pub-title">AlertSphere: Alerting About Disasters and Ensuring Safety Using AI</div>
+        <div class="pub-meta">ICAMIDA 2025 · Aurangabad, India · <a href="https://doi.org/10.1109/ICAMIDA64673.2025.11209472" target="_blank" class="pub-link">DOI →</a></div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-value" data-target="8">0</div>
+          <div class="stat-label">AI Security Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">IEEE</div>
+          <div class="stat-label">Published Author</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">PNPT</div>
+          <div class="stat-label">In Progress</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">MSc AI</div>
+          <div class="stat-label">NCI Dublin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<div id="skills" class="full-bleed">
+  <section>
+    <div class="section-header reveal">
+      <h2>Skills</h2>
+      <span class="section-num">02</span>
+    </div>
+    <div class="core-stack reveal reveal-delay-1" aria-label="Core stack">
+      <span class="core-label">Core Stack</span>
+      <span class="skill-tag core-skill"><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</span>
+      <span class="skill-tag core-skill"><i class="devicon-fastapi-plain colored" aria-hidden="true"></i>FastAPI</span>
+      <span class="skill-tag core-skill"><i class="devicon-react-original colored" aria-hidden="true"></i>React</span>
+      <span class="skill-tag core-skill"><i class="devicon-docker-plain colored" aria-hidden="true"></i>Docker</span>
+      <span class="skill-tag core-skill skill-concept" data-symbol="target">Pentesting</span>
+      <span class="skill-tag core-skill skill-concept" data-symbol="network-scan">Nmap</span>
+      <span class="skill-tag core-skill has-logo" data-icon="BP"><img src="https://cdn.simpleicons.org/burpsuite" alt="" loading="lazy">Burp</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-cat">AI & Machine Learning</div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</span>
+          <span class="skill-tag"><i class="devicon-tensorflow-original colored" aria-hidden="true"></i>TensorFlow</span>
+          <span class="skill-tag"><i class="devicon-pytorch-original colored" aria-hidden="true"></i>PyTorch</span>
+          <span class="skill-tag"><i class="devicon-scikitlearn-plain colored" aria-hidden="true"></i>Scikit-learn</span>
+          <span class="skill-tag has-logo" data-icon="XG"><img src="https://cdn.simpleicons.org/xgboost" alt="" loading="lazy">XGBoost</span>
+          <span class="skill-tag has-logo" data-icon="LG"><img src="https://cdn.simpleicons.org/lightgbm" alt="" loading="lazy">LightGBM</span>
+          <span class="skill-tag has-logo" data-icon="HF"><img src="https://cdn.simpleicons.org/huggingface" alt="" loading="lazy">NLP</span>
+          <span class="skill-tag"><i class="devicon-opencv-plain colored" aria-hidden="true"></i>Computer Vision</span>
+          <span class="skill-tag skill-concept" data-symbol="network">LSTM</span>
+          <span class="skill-tag skill-concept" data-symbol="explain">SHAP</span>
+          <span class="skill-tag"><i class="devicon-fastapi-plain colored" aria-hidden="true"></i>FastAPI</span>
+          <span class="skill-tag skill-concept" data-symbol="chip">Groq API</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-cat">Security Concepts</div>
+        <div class="skill-tags">
+          <span class="skill-tag skill-concept" data-symbol="target">Penetration Testing</span>
+          <span class="skill-tag skill-concept" data-symbol="bug">CVE Analysis</span>
+          <span class="skill-tag skill-concept" data-symbol="score">CVSS Scoring</span>
+          <span class="skill-tag has-logo" data-icon="OW"><img src="https://cdn.simpleicons.org/owasp" alt="" loading="lazy">OWASP</span>
+          <span class="skill-tag has-logo" data-icon="AD"><img src="https://cdn.simpleicons.org/microsoft" alt="" loading="lazy">Active Directory</span>
+          <span class="skill-tag skill-concept" data-symbol="scan">Vulnerability Assessment</span>
+          <span class="skill-tag has-logo" data-icon="AI"><img src="https://cdn.simpleicons.org/openai" alt="" loading="lazy">LLM Security</span>
+          <span class="skill-tag has-logo" data-icon="AI"><img src="https://cdn.simpleicons.org/openai" alt="" loading="lazy">Prompt Injection</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-cat">Security Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag has-logo" data-icon="KL"><img src="https://cdn.simpleicons.org/kalilinux" alt="" loading="lazy">Kali Linux</span>
+          <span class="skill-tag has-logo" data-icon="MS"><img src="https://cdn.simpleicons.org/metasploit" alt="" loading="lazy">Metasploit</span>
+          <span class="skill-tag has-logo" data-icon="BP"><img src="https://cdn.simpleicons.org/burpsuite" alt="" loading="lazy">Burp Suite</span>
+          <span class="skill-tag has-logo" data-icon="WS"><img src="https://cdn.simpleicons.org/wireshark" alt="" loading="lazy">Wireshark</span>
+          <span class="skill-tag skill-concept" data-symbol="network-scan">Nmap</span>
+          <span class="skill-tag skill-concept" data-symbol="matrix">MITRE ATT&CK</span>
+          <span class="skill-tag has-logo" data-icon="TH"><img src="https://cdn.simpleicons.org/tryhackme" alt="" loading="lazy">TryHackMe</span>
+          <span class="skill-tag has-logo" data-icon="BC"><img src="https://cdn.simpleicons.org/bugcrowd" alt="" loading="lazy">Bugcrowd</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-3">
+        <div class="skill-cat">Dev & Cloud</div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="devicon-react-original colored" aria-hidden="true"></i>React</span>
+          <span class="skill-tag"><i class="devicon-docker-plain colored" aria-hidden="true"></i>Docker</span>
+          <span class="skill-tag"><i class="devicon-git-plain colored" aria-hidden="true"></i>Git</span>
+          <span class="skill-tag"><i class="devicon-amazonwebservices-plain-wordmark colored" aria-hidden="true"></i>AWS (EC2/S3/IAM/VPC)</span>
+          <span class="skill-tag"><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>PostgreSQL</span>
+          <span class="skill-tag"><i class="devicon-mysql-original colored" aria-hidden="true"></i>MySQL</span>
+          <span class="skill-tag"><i class="devicon-bash-plain colored" aria-hidden="true"></i>Bash/Shell</span>
+          <span class="skill-tag"><i class="devicon-linux-plain colored" aria-hidden="true"></i>Linux</span>
+          <span class="skill-tag"><i class="devicon-supabase-plain colored" aria-hidden="true"></i>Supabase</span>
+          <span class="skill-tag"><i class="devicon-netlify-plain colored" aria-hidden="true"></i>Netlify</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="featured-header">
+    <div class="section-header reveal">
+      <h2>Projects</h2>
+      <span class="section-num">03</span>
+    </div>
+    <div class="featured-controls reveal">
+      <button class="scroll-btn" id="scroll-prev" aria-label="Scroll Left">←</button>
+      <button class="scroll-btn" id="scroll-next" aria-label="Scroll Right">→</button>
+    </div>
+  </div>
+
+  <div class="project-section-label reveal">
+    <span>Featured Security Builds</span>
+    <p>Case-study style previews for the strongest AI and security work.</p>
+  </div>
+  <div class="projects-featured-container">
+    <div class="projects-featured-track">
+      <div class="project-card reveal">
+        <div class="project-icon">🛡️</div>
+        <div class="project-status status-wip">In Progress</div>
+        <div class="project-visual">
+          <img src="images/TriageAI.png" alt="TriageAI dashboard preview" loading="lazy">
+        </div>
+        <div class="project-metric">MITRE ATT&CK Mapped</div>
+        <div class="project-name">TriageAI</div>
+        <div class="project-tagline">LLM-powered SOC alert triage engine with MITRE ATT&CK mapping</div>
+        <div class="project-desc">Ingests SIEM alerts, deduplicates via FAISS, and scores with Groq llama-3.3-70b. Dashboard built with React/Vite/FastAPI. Targeting Dublin-based security companies.</div>
+        <div class="project-meta">
+          <div><span>Problem</span><strong>Noisy SOC alerts</strong></div>
+          <div><span>Built with</span><strong>React, FastAPI, FAISS</strong></div>
+          <div><span>Result</span><strong>Prioritized triage queue</strong></div>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">LLM</span><span class="project-tag">FAISS</span><span class="project-tag">MITRE</span><span class="project-tag">Groq</span>
+        </div>
+        <a href="https://github.com/Sangamesh-dev" target="_blank" class="project-btn">View Project</a>
+        <span class="project-link coming-soon-badge">Repo Coming Soon</span>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-icon">🤖</div>
+        <div class="project-status status-done">Completed</div>
+        <div class="project-visual">
+          <img src="images/RedTeam_Copilot.png" alt="RedTeam Copilot pipeline preview" loading="lazy">
+        </div>
+        <div class="project-metric">4-Stage Pipeline</div>
+        <div class="project-name">RedTeam Copilot AI</div>
+        <div class="project-tagline">Agentic pentesting assistant with 4-stage LLM pipeline</div>
+        <div class="project-desc">Autonomous red team assistant running OSINT → Port Scan → CVE Match → Report pipeline. Generates dark-themed PDF pentest reports automatically.</div>
+        <div class="project-meta">
+          <div><span>Problem</span><strong>Manual recon reports</strong></div>
+          <div><span>Built with</span><strong>LLM agents, FastAPI</strong></div>
+          <div><span>Result</span><strong>PDF pentest reports</strong></div>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Agentic AI</span><span class="project-tag">FastAPI</span><span class="project-tag">Groq</span><span class="project-tag">CVE</span>
+        </div>
+        <a href="https://github.com/Sangamesh-dev/redteam-copilot" target="_blank" class="project-btn">View Project</a>
+        <a href="https://github.com/Sangamesh-dev/redteam-copilot" target="_blank" class="project-link">GitHub <span>→</span></a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-icon">🛡️</div>
+        <div class="project-status status-done">Completed</div>
+        <div class="project-visual">
+          <img src="images/ZeroInject_Shield.png" alt="ZeroInject Shield pipeline" loading="lazy">
+        </div>
+        <div class="project-metric">6-Stage Zero-Trust</div>
+        <div class="project-name">ZeroInject Shield</div>
+        <div class="project-tagline">Multi-LLM ensemble defense against prompt injection attacks</div>
+        <div class="project-desc">A 4-stage multi-agent pipeline using consensus voting across multiple LLMs. Built with FastAPI, React, and Groq API — targets SaaS and small business LLM deployments.</div>
+        <div class="project-meta">
+          <div><span>Problem</span><strong>Prompt injection risk</strong></div>
+          <div><span>Built with</span><strong>React, Groq, FastAPI</strong></div>
+          <div><span>Result</span><strong>Consensus threat verdicts</strong></div>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">LLM Security</span>
+          <span class="project-tag">FastAPI</span>
+          <span class="project-tag">React</span>
+          <span class="project-tag">Groq API</span>
+        </div>
+        <a href="https://github.com/Sangamesh-dev/ZeroInject" target="_blank" class="project-btn">View Project</a>
+        <a href="https://github.com/Sangamesh-dev/ZeroInject" target="_blank" class="project-link">GitHub <span>→</span></a>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-icon">🔍</div>
+        <div class="project-status status-done">Completed</div>
+        <div class="project-visual">
+          <img src="images/ByteHunter.png" alt="ByteHunter model results" loading="lazy">
+        </div>
+        <div class="project-metric">89.67% Accuracy</div>
+        <div class="project-name">ByteHunter</div>
+        <div class="project-tagline">Dual-model malware classification with SHAP explainability</div>
+        <div class="project-desc">LightGBM on EMBER 2018 (89.67% accuracy) for threat scoring + XGBoost on Microsoft BIG-2015 for family classification. Full React/Vite/FastAPI stack.</div>
+        <div class="project-meta">
+          <div><span>Problem</span><strong>Malware classification</strong></div>
+          <div><span>Built with</span><strong>LightGBM, XGBoost</strong></div>
+          <div><span>Result</span><strong>89.67% accuracy</strong></div>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">LightGBM</span>
+          <span class="project-tag">XGBoost</span>
+          <span class="project-tag">SHAP</span>
+          <span class="project-tag">Docker</span>
+        </div>
+        <a href="https://github.com/Sangamesh-dev/ByteHunter" target="_blank" class="project-btn">View Project</a>
+        <a href="https://github.com/Sangamesh-dev/ByteHunter" target="_blank" class="project-link">GitHub <span>→</span></a>
+      </div>
+
+
+      <div class="project-card reveal">
+        <div class="project-icon">📧</div>
+        <div class="project-status status-done">Completed</div>
+        <div class="project-visual">
+          <img src="images/MailGuard_AI.png" alt="MailGuard AI Gmail extension" loading="lazy">
+        </div>
+        <div class="project-metric">72% Acc · 84% Precision</div>
+        <div class="project-name">MailGuard AI</div>
+        <div class="project-tagline">Email impersonation detection with SPF/DKIM/DMARC validation</div>
+        <div class="project-meta">
+          <div><span>Problem</span><strong>Email impersonation</strong></div>
+          <div><span>Built with</span><strong>NLP, Chrome Extension</strong></div>
+          <div><span>Result</span><strong>72% accuracy · 84% precision</strong></div>
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">NLP</span>
+          <span class="project-tag">Stylometry</span>
+          <span class="project-tag">SPF/DKIM/DMARC</span>
+          <span class="project-tag">Chrome Extension</span>
+        </div>
+        <a href="https://github.com/Sangamesh-dev" target="_blank" class="project-btn">View Project</a>
+        <span class="project-link coming-soon-badge">Repo Coming Soon</span>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-dots" id="carousel-dots"></div>
+
+  <div class="project-section-label project-index-label reveal">
+    <span>Project Index</span>
+    <p>Compact supporting builds and experiments.</p>
+  </div>
+  <div class="projects-grid project-index">
+    <div class="project-card reveal">
+      <div class="project-icon">🛡️</div>
+      <div class="project-visual">
+        <img src="images/ZeroTrace_AI.png" alt="ZeroTrace AI threat intelligence" loading="lazy">
+      </div>
+      <div class="project-name">ZeroTrace AI</div>
+      <div class="project-tagline">Threat intelligence with exploit prediction</div>
+      <div class="project-desc">Full-stack threat intel platform ingesting CVEs from NVD, CISA KEV, and ExploitDB with XGBoost exploit prediction and FAISS vector search.</div>
+      <div class="project-meta compact">
+        <div><span>Built with</span><strong>XGBoost, FAISS</strong></div>
+        <div><span>Result</span><strong>Exploit risk ranking</strong></div>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">XGBoost</span><span class="project-tag">FAISS</span><span class="project-tag">CVE</span>
+      </div>
+      <a href="https://github.com/Sangamesh-dev" target="_blank" class="project-btn">View Project</a>
+      <span class="project-link coming-soon-badge">Repo Coming Soon</span>
+    </div>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-icon">🛡️</div>
+      <div class="project-visual">
+        <img src="images/Predictive_Patch.png" alt="Predictive Patch Scheduler dashboard" loading="lazy">
+      </div>
+      <div class="project-name">Predictive Patch Scheduler</div>
+      <div class="project-tagline">ML-driven patch automation</div>
+      <div class="project-desc">Processes 500+ CVE records with CVSS-based risk scoring, improving patch prioritization accuracy by ~35% over manual methods.</div>
+      <div class="project-meta compact">
+        <div><span>Built with</span><strong>Random Forest, FastAPI</strong></div>
+        <div><span>Result</span><strong>Patch priority scoring</strong></div>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Random Forest</span><span class="project-tag">FastAPI</span><span class="project-tag">CVSS</span>
+      </div>
+      <a href="https://github.com/Sangamesh-dev/Predictive-Patch-Scheduler" target="_blank" class="project-btn">View Project</a>
+      <a href="https://github.com/Sangamesh-dev/Predictive-Patch-Scheduler" target="_blank" class="project-link">GitHub →</a>
+    </div>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-icon">🔍</div>
+      <div class="project-visual">
+        <img src="images/VulnXploit.png" alt="VulnXploit terminal output" loading="lazy">
+      </div>
+      <div class="project-name">VulnXploit Scanner</div>
+      <div class="project-tagline">Web vulnerability scanner</div>
+      <div class="project-desc">Automated port scanning across 65,000+ ports with real-time CVE matching and PoC exploit generation, cutting manual assessment time by ~60%.</div>
+      <div class="project-meta compact">
+        <div><span>Built with</span><strong>Python, Flask, Nmap</strong></div>
+        <div><span>Result</span><strong>Web risk discovery</strong></div>
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Python</span><span class="project-tag">Flask</span><span class="project-tag">Nmap</span>
+      </div>
+      <a href="https://github.com/Sangamesh-dev/VulnXploit" target="_blank" class="project-btn">View Project</a>
+      <a href="https://github.com/Sangamesh-dev/VulnXploit" target="_blank" class="project-link">GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-header reveal">
+    <h2>Certifications</h2>
+    <span class="section-num">04</span>
+  </div>
+  <div class="certs-list">
+    <div class="cert-item reveal">
+      <div class="cert-icon cert-logo cert-logo-image" aria-hidden="true"><img src="https://certifications.tcm-sec.com/wp-content/uploads/2023/02/logo-280x280-1.png" alt="" loading="lazy"></div>
+      <div class="cert-info">
+        <div class="cert-name">PNPT – Practical Network Penetration Tester</div>
+        <div class="cert-issuer">TCM Security</div>
+        <span class="cert-badge badge-wip">In Progress</span>
+      </div>
+    </div>
+    <div class="cert-item reveal reveal-delay-1">
+      <div class="cert-icon cert-logo" aria-hidden="true"><img src="https://cdn.simpleicons.org/comptia" alt="" loading="lazy"></div>
+      <div class="cert-info">
+        <div class="cert-name">CompTIA Network+ (N10-008)</div>
+        <div class="cert-issuer">CompTIA</div>
+        <span class="cert-badge badge-done">Completed</span>
+      </div>
+    </div>
+    <div class="cert-item reveal reveal-delay-2">
+      <div class="cert-icon cert-logo" aria-hidden="true"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+      <div class="cert-info">
+        <div class="cert-name">AWS Academy Graduate – Cloud Architecting</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+        <span class="cert-badge badge-done">Completed</span>
+      </div>
+    </div>
+    <div class="cert-item reveal reveal-delay-3">
+      <div class="cert-icon cert-logo" aria-hidden="true"><img src="https://cdn.simpleicons.org/tata" alt="" loading="lazy"></div>
+      <div class="cert-info">
+        <div class="cert-name">Tata Cybersecurity Analyst Job Simulation</div>
+        <div class="cert-issuer">Tata Group / Forage</div>
+        <span class="cert-badge badge-done">Completed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE + EDUCATION -->
+<section id="experience">
+  <div class="section-header reveal">
+    <h2>Experience & Education</h2>
+    <span class="section-num">05</span>
+  </div>
+  <div class="exp-edu-grid">
+    <div class="reveal">
+      <div class="col-header">Experience & Leadership</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-period">2023</div>
+          <div class="tl-role">Data Science Intern</div>
+          <div class="tl-org">CodeClause · Remote</div>
+          <ul class="tl-bullets">
+            <li>Built Image Caption Generator using CNN + RNN with TensorFlow & NLTK</li>
+            <li>Developed Loan Status Prediction with 5 ML models, deployed via Tkinter GUI</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-period">Jan 2024 – Jul 2025</div>
+          <div class="tl-role">Vice President</div>
+          <div class="tl-org">ACM NMIT</div>
+          <div class="tl-note">Led 10+ workshops · 200+ participants</div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-period">Nov 2023 – Jul 2025</div>
+          <div class="tl-role">Vice Secretary</div>
+          <div class="tl-org">IEEE CIS NMIT</div>
+          <div class="tl-note">Grew chapter membership by 30%</div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-period">Dec 2023 – Jul 2025</div>
+          <div class="tl-role">Executive Committee Member</div>
+          <div class="tl-org">IEEE NMIT Student Branch</div>
+          <div class="tl-note">Organized 6+ research seminars on AI & embedded systems</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="col-header">Education</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-period">Jan 2026 – Jan 2027</div>
+          <div class="tl-role">MSc in Artificial Intelligence</div>
+          <div class="tl-org">National College of Ireland · Dublin</div>
+          <div class="tl-note">Expected graduation</div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-period">Feb 2023 – Oct 2025</div>
+          <div class="tl-role">B.E. in AI and Data Science</div>
+          <div class="tl-org">Nitte Meenakshi Institute of Technology · Bengaluru</div>
+          <div class="tl-note">CGPA: 7.49 / 10</div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-period">Aug 2019 – Aug 2022</div>
+          <div class="tl-role">Diploma in Computer Science</div>
+          <div class="tl-org">N.V. Polytechnic College · Kalaburagi</div>
+          <div class="tl-note">80%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div id="contact" class="full-bleed">
+  <section>
+    <div class="section-header reveal">
+      <h2>Let's Connect</h2>
+      <span class="section-num">06</span>
+    </div>
+    <div class="contact-layout">
+      <div class="reveal">
+        <h3 class="contact-headline">Building something at the edge of <em>AI and security?</em></h3>
+        <p class="contact-body">Whether you're hiring for an internship, have a project worth fighting over, or just want to talk about breaking things intelligently — I'm genuinely interested.</p>
+        <a href="Sangamesh_Dandin_Resume.pdf" download class="resume-download">
+          <div class="rd-left">
+            <div class="rd-label">Download</div>
+            <div class="rd-name">Sangamesh_Dandin_Resume.pdf</div>
+          </div>
+          <div class="rd-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </a>
+      </div>
+      <div class="contact-links reveal reveal-delay-1">
+        <a href="mailto:sangameshs2003@gmail.com" class="contact-link-item">
+          <div>
+            <div class="cli-label">Email</div>
+            <div class="cli-val">sangameshs2003@gmail.com</div>
+          </div>
+          <span class="cli-arrow">→</span>
+        </a>
+        <a href="https://github.com/Sangamesh-dev" target="_blank" class="contact-link-item">
+          <div>
+            <div class="cli-label">GitHub</div>
+            <div class="cli-val">github.com/Sangamesh-dev</div>
+          </div>
+          <span class="cli-arrow">→</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sangamesh-girish-dandin-553b45247/" target="_blank" class="contact-link-item">
+          <div>
+            <div class="cli-label">LinkedIn</div>
+            <div class="cli-val">Sangamesh Girish Dandin</div>
+          </div>
+          <span class="cli-arrow">→</span>
+        </a>
+        <a href="https://bugcrowd.com/n0xvector" target="_blank" class="contact-link-item">
+          <div>
+            <div class="cli-label">Bugcrowd</div>
+            <div class="cli-val">n0xvector</div>
+          </div>
+          <span class="cli-arrow">→</span>
+        </a>
+        <div class="contact-link-item">
+          <div>
+            <div class="cli-label">Location</div>
+            <div class="cli-val">Dublin, Ireland 🇮🇪</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="mobile-menu-overlay" id="mobile-menu">
+  <ul class="mobile-nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="mobile-resume-item"><a href="Sangamesh_Dandin_Resume.pdf" download class="nav-cta mobile-resume-link">Resume ↓</a></li>
+  </ul>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div id="modal-body">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</div>
+
+<div class="email-toast" id="email-toast">Email copied to clipboard!</div>
+
+<button id="back-to-top" aria-label="Back to Top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-socials">
+    <a href="https://github.com/Sangamesh-dev" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/sangamesh-girish-dandin-553b45247/" target="_blank">LinkedIn</a>
+    <a href="https://bugcrowd.com/n0xvector" target="_blank">Bugcrowd</a>
+  </div>
+  <div class="footer-copy">
+    <div class="footer-name">© 2026 Sangamesh Dandin</div>
+    <div class="footer-meta">MSc AI · National College of Ireland</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="loader.js"></script>
+</body>
+</html>
