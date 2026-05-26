@@ -995,6 +995,167 @@
     padding: 0.75rem 0;
   }
 
+  /* ── BLOG ── */
+  .blog-grid {
+    border: 1px solid var(--line);
+  }
+  .blog-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-height: 340px;
+  }
+  .blog-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent-warm);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  .blog-card:hover { transform: translateY(-2px); }
+  .blog-card:hover::after { transform: scaleX(1); }
+  .blog-card-content {
+    background: var(--paper);
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border-right: 1px solid var(--line);
+    transition: background 0.25s;
+  }
+  .blog-card:hover .blog-card-content { background: var(--paper-2); }
+  .blog-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .blog-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    border: 1px solid rgba(200, 80, 42, 0.35);
+    padding: 0.25rem 0.75rem;
+  }
+  .blog-ext {
+    font-size: 1.25rem;
+    color: var(--ink-4);
+    transition: color 0.2s, transform 0.25s;
+  }
+  .blog-card:hover .blog-ext {
+    color: var(--accent-warm);
+    transform: translate(3px, -3px);
+  }
+  .blog-title {
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  .blog-platform {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+  }
+  .blog-cta {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s, gap 0.2s;
+  }
+  .blog-cta::after { content: '→'; }
+  .blog-card:hover .blog-cta { color: var(--accent-warm); gap: 0.7rem; }
+
+  /* terminal panel */
+  .blog-terminal {
+    background: #0d0d12;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .term-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+  }
+  .term-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .term-dot:nth-child(1) { background: #ff5f57; }
+  .term-dot:nth-child(2) { background: #febc2e; }
+  .term-dot:nth-child(3) { background: #28c840; }
+  .term-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: 0.05em;
+    margin-left: 0.4rem;
+  }
+  .term-body {
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+    overflow: hidden;
+  }
+  .term-line {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.72rem;
+    line-height: 1.75;
+    white-space: pre;
+  }
+  .term-spacer { height: 0.45rem; }
+  .term-prompt { color: rgba(255,255,255,0.22); }
+  .term-dim { color: rgba(255,255,255,0.28); }
+  .term-white { color: rgba(255,255,255,0.82); }
+  .term-section {
+    color: rgba(255,255,255,0.35);
+    font-size: 0.64rem;
+    letter-spacing: 0.1em;
+  }
+  .term-inject { color: #e05c5c; }
+  .term-red { color: #e05c5c; font-weight: 700; }
+  .term-green { color: #3dba6f; }
+  .term-blocked {
+    color: #e05c5c;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 900px) {
+    .blog-card { grid-template-columns: 1fr; }
+    .blog-card-content { border-right: none; border-bottom: 1px solid var(--line); }
+    .blog-terminal { min-height: 280px; }
+  }
+
   /* ── CERTS ── */
   .certs-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
   .cert-item {
