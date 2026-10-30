@@ -2,49 +2,119 @@
   "meta": {
     "name": "Sangamesh Girish Dandin",
     "displayName": "Sangamesh Dandin",
-    "tagline": "AI Engineer. Security Researcher. Builder.",
-    "subtitle": "I build intelligent systems that find, fight, and fix threats — where machine learning meets offensive security.",
+    "tagline": "AI & software engineer. Security tinkerer. Builder.",
+    "subtitle": "I build software that learns and defends: machine-learning systems, AI-powered tools, automation and cybersecurity projects.",
     "location": "Dublin, Ireland",
     "email": "sangameshs2003@gmail.com",
     "resumeFile": "Sangamesh_Dandin_Resume.pdf",
     "availableForWork": true,
-    "availabilityText": "Open to internships from Sept 2026"
+    "availabilityText": "Open to graduate & junior roles"
   },
   "social": [
-    { "label": "GitHub", "url": "https://github.com/Sangamesh-dev", "icon": "github" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/sangamesh-girish-dandin-553b45247/", "icon": "linkedin" },
-    { "label": "Bugcrowd", "url": "https://bugcrowd.com/n0xvector", "icon": "bugcrowd" },
-    { "label": "Email", "url": "mailto:sangameshs2003@gmail.com", "icon": "email" }
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Sangamesh-dev",
+      "icon": "github"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/sangamesh-girish-dandin-553b45247/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "Bugcrowd",
+      "url": "https://bugcrowd.com/n0xvector",
+      "icon": "bugcrowd"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:sangameshs2003@gmail.com",
+      "icon": "email"
+    }
   ],
   "about": {
     "paragraphs": [
-      "I'm an MSc AI student at National College of Ireland, Dublin, working at the intersection of machine learning and cybersecurity. My work focuses on building systems that are not just intelligent — but defensively aware.",
-      "From multi-LLM prompt injection defenses to malware classifiers, I ship full-stack AI products with real security applications. I hold a PNPT candidacy through TCM Security and actively hunt bugs on Bugcrowd as n0xvector.",
-      "I believe the best security tools are built by people who understand both the attack and the model. That's the space I live in."
+      "I'm an AI and software engineer with a background in AI & Data Science, now studying for an MSc in AI at the National College of Ireland in Dublin. I turn technical ideas into useful, working systems.",
+      "I build practical applications across machine learning, AI-powered tools, automation and cybersecurity, from malware classifiers and LLM pipelines to threat-intelligence dashboards and pentest tooling.",
+      "Security is the thread I keep pulling: I'm working towards the PNPT with TCM Security and hunt bugs on Bugcrowd as n0xvector. Most of what I know, I learned by building it."
     ],
     "highlights": [
-      { "value": "6+", "label": "AI Security Projects" },
-      { "value": "IEEE", "label": "Published Author" },
-      { "value": "PNPT", "label": "In Progress" },
-      { "value": "MSc AI", "label": "NCI Dublin" }
+      {
+        "value": "9",
+        "label": "Projects"
+      },
+      {
+        "value": "IEEE",
+        "label": "Published Author"
+      },
+      {
+        "value": "PNPT",
+        "label": "In Progress"
+      },
+      {
+        "value": "MSc AI",
+        "label": "NCI Dublin"
+      }
     ]
   },
   "skills": [
     {
       "category": "AI & Machine Learning",
-      "items": ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "XGBoost", "LightGBM", "NLP", "Computer Vision", "LSTM", "SHAP", "FastAPI", "Groq API"]
+      "items": [
+        "Python",
+        "TensorFlow",
+        "PyTorch",
+        "Scikit-learn",
+        "XGBoost",
+        "LightGBM",
+        "NLP",
+        "Computer Vision",
+        "LSTM",
+        "SHAP",
+        "FastAPI",
+        "Groq API"
+      ]
     },
     {
       "category": "Security Concepts",
-      "items": ["Penetration Testing", "CVE Analysis", "CVSS Scoring", "OWASP", "Active Directory", "Vulnerability Assessment", "LLM Security", "Prompt Injection"]
+      "items": [
+        "Penetration Testing",
+        "CVE Analysis",
+        "CVSS Scoring",
+        "OWASP",
+        "Active Directory",
+        "Vulnerability Assessment",
+        "LLM Security",
+        "Prompt Injection"
+      ]
     },
     {
       "category": "Security Tools",
-      "items": ["Kali Linux", "Metasploit", "Burp Suite", "Wireshark", "Nmap", "MITRE ATT&CK", "TryHackMe", "Bugcrowd"]
+      "items": [
+        "Kali Linux",
+        "Metasploit",
+        "Burp Suite",
+        "Wireshark",
+        "Nmap",
+        "MITRE ATT&CK",
+        "TryHackMe",
+        "Bugcrowd"
+      ]
     },
     {
       "category": "Dev & Cloud",
-      "items": ["React", "Docker", "Git", "AWS (EC2/S3/IAM/VPC)", "PostgreSQL", "MySQL", "Bash/Shell", "Linux", "Supabase", "Netlify"]
+      "items": [
+        "React",
+        "Docker",
+        "Git",
+        "AWS (EC2/S3/IAM/VPC)",
+        "PostgreSQL",
+        "MySQL",
+        "Bash/Shell",
+        "Linux",
+        "Supabase",
+        "Netlify"
+      ]
     }
   ],
   "projects": [
@@ -53,7 +123,15 @@
       "name": "TriageAI",
       "tagline": "LLM-powered SOC alert triage engine with MITRE ATT&CK mapping",
       "description": "Ingests SIEM alerts, deduplicates via FAISS vector search, maps to MITRE ATT&CK framework, scores with Groq llama-3.3-70b-versatile, and surfaces results via a React/Vite/TailwindCSS dashboard with PDF export.",
-      "tags": ["LLM", "FAISS", "MITRE ATT&CK", "Groq", "React", "FastAPI", "Supabase"],
+      "tags": [
+        "LLM",
+        "FAISS",
+        "MITRE ATT&CK",
+        "Groq",
+        "React",
+        "FastAPI",
+        "Supabase"
+      ],
       "status": "In Progress",
       "github": "https://github.com/Sangamesh-dev",
       "featured": false,
@@ -62,9 +140,17 @@
     {
       "id": 2,
       "name": "RedTeam Copilot AI",
-      "tagline": "Agentic pentesting assistant with 4-stage LLM pipeline",
-      "description": "Autonomous red team assistant running OSINT → Port Scan → CVE Match → Report pipeline. Generates dark-themed PDF pentest reports automatically. Built with FastAPI and Groq API.",
-      "tags": ["Agentic AI", "Red Team", "OSINT", "CVE", "FastAPI", "Groq", "PDF Reports"],
+      "tagline": "An automated recon-to-report pentest assistant",
+      "description": "A FastAPI service that automates the recon-to-report part of a penetration test in four fixed stages: OSINT (DNS records, a subdomain wordlist, crt.sh and WHOIS), an nmap service scan, CVE lookups against the NVD with CISA KEV escalation, and a Groq-written report rendered as a PDF and stored in Supabase. A React front end streams progress as the scan runs. CVE matches are keyword lookups to review, not confirmed vulnerabilities.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "Groq",
+        "nmap",
+        "NVD API",
+        "Supabase",
+        "React"
+      ],
       "status": "Completed",
       "github": "https://github.com/Sangamesh-dev/redteam-copilot",
       "featured": true,
@@ -73,10 +159,17 @@
     {
       "id": 3,
       "name": "ZeroInject Shield",
-      "tagline": "Multi-LLM ensemble defense against prompt injection attacks",
-      "description": "A 4-stage multi-agent prompt injection defense pipeline using consensus voting across multiple LLMs. Built with FastAPI backend, React frontend, and Groq API. Targets SaaS and small business LLM deployments.",
-      "tags": ["LLM Security", "FastAPI", "React", "Groq API", "Multi-Agent"],
-      "status": "In Progress",
+      "tagline": "Multi-LLM screening for prompt injection in a chat app",
+      "description": "A FastAPI middleware in front of a demo shop chatbot. An LLM first extracts the legitimate request from each message and blocks it outright if nothing legitimate remains. Three Groq-hosted verifiers (Llama 3.3 70B, Llama 3.1 8B and Qwen3 32B) then score the original text, their weighted consensus maps to BLOCK, SANITIZE or ALLOW, and rule-based overrides handle known attack phrases. Every decision is logged to SQLite and shown on a React dashboard.",
+      "tags": [
+        "LLM security",
+        "FastAPI",
+        "React",
+        "Groq API",
+        "SQLite",
+        "Multi-agent"
+      ],
+      "status": "Completed",
       "github": "https://github.com/Sangamesh-dev/ZeroInject",
       "featured": true,
       "type": "security"
@@ -84,9 +177,17 @@
     {
       "id": 4,
       "name": "ByteHunter",
-      "tagline": "Dual-model malware classification with explainability",
-      "description": "Two-model pipeline using EMBER 2018 LightGBM (89.67% accuracy, 95.40% AUC) for threat scoring and XGBoost on Microsoft BIG-2015 for malware family classification. Full SHAP explainability, React/Vite/FastAPI/Docker stack.",
-      "tags": ["Malware Analysis", "LightGBM", "XGBoost", "SHAP", "Docker", "React"],
+      "tagline": "Malware triage for Windows executables, with one model deciding the verdict",
+      "description": "A FastAPI and React malware-triage app. Uploaded files are hashed and cached by SHA-256, parsed with LIEF into a 2,381-value feature vector and scored by the pre-trained EMBER 2018 LightGBM model. One threshold scale turns that score into SAFE, SUSPICIOUS or MALICIOUS, with a heuristic scorer as the fallback when the model isn't available. Random Forest and Logistic Regression add an agreement check, an XGBoost model trained on Microsoft BIG-2015 suggests a malware family for high scores, and SHAP-based explanations are summarised as text. Results are stored in SQLite and exported as PDF reports.",
+      "tags": [
+        "Python",
+        "LightGBM",
+        "LIEF",
+        "XGBoost",
+        "SHAP",
+        "FastAPI",
+        "React"
+      ],
       "status": "Completed",
       "github": "https://github.com/Sangamesh-dev/ByteHunter",
       "featured": true,
@@ -97,7 +198,13 @@
       "name": "MailGuard AI",
       "tagline": "Email impersonation detection with SPF/DKIM/DMARC validation",
       "description": "Stylometric classifier trained on the Enron corpus. Chrome Extension integrates into Gmail with real-time SPF/DKIM/DMARC validation. 72% accuracy, 84% impostor precision.",
-      "tags": ["NLP", "Stylometry", "SPF/DKIM/DMARC", "Chrome Extension", "FastAPI"],
+      "tags": [
+        "NLP",
+        "Stylometry",
+        "SPF/DKIM/DMARC",
+        "Chrome Extension",
+        "FastAPI"
+      ],
       "status": "Completed",
       "github": "https://github.com/Sangamesh-dev",
       "featured": true,
@@ -108,7 +215,14 @@
       "name": "ZeroTrace AI",
       "tagline": "Threat intelligence platform with exploit prediction",
       "description": "Full-stack cybersecurity threat intelligence platform ingesting CVE data from NVD, CISA KEV, ExploitDB. XGBoost for exploit probability, Groq API for NLP summarization, FAISS vector search, Streamlit/FastAPI/PostgreSQL/Docker.",
-      "tags": ["Threat Intelligence", "XGBoost", "FAISS", "CVE", "Docker", "Streamlit"],
+      "tags": [
+        "Threat Intelligence",
+        "XGBoost",
+        "FAISS",
+        "CVE",
+        "Docker",
+        "Streamlit"
+      ],
       "status": "Completed",
       "github": "https://github.com/Sangamesh-dev",
       "featured": false,
@@ -117,9 +231,16 @@
     {
       "id": 7,
       "name": "Predictive Patch Scheduler",
-      "tagline": "ML-driven vulnerability management & patch automation",
-      "description": "Processes 500+ CVE records with CVSS-based risk scoring, improving prioritization accuracy by ~35% over manual methods. RESTful API via FastAPI for integration with external security tools.",
-      "tags": ["Random Forest", "Gradient Boosting", "FastAPI", "CVSS", "CVE"],
+      "tagline": "Patch scheduling from rule-based and ML risk scores",
+      "description": "A FastAPI app that turns vulnerability records (entered by hand, uploaded as CSV or JSON, or generated as sample data) into a patch schedule. A deterministic rule scores risk from CVSS, exploit availability and system criticality. An optional ML path (Random Forest for risk, Gradient Boosting for priority) is trained on synthetic data labelled by the same rule, so it approximates the rule rather than replacing it. Priority sets the patch window, from 24 hours for critical to 14 days for low, and a dashboard shows Plotly analytics with WebSocket alerts.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "scikit-learn",
+        "SQLite",
+        "Plotly",
+        "WebSockets"
+      ],
       "status": "Completed",
       "github": "https://github.com/Sangamesh-dev/Predictive-Patch-Scheduler",
       "featured": true,
@@ -128,9 +249,15 @@
     {
       "id": 8,
       "name": "VulnXploit Scanner",
-      "tagline": "Full-stack web vulnerability scanner with CVE matching",
-      "description": "Automated port scanning across 65,000+ ports, reducing manual assessment time by ~60%. Real-time CVE database matching and PoC exploit generation to streamline pentesting workflows.",
-      "tags": ["Python", "Flask", "Nmap", "CVE", "Penetration Testing"],
+      "tagline": "A small web front end for nmap service scans",
+      "description": "A Flask app with a vanilla-JavaScript front end. It runs nmap against 12 common ports, looks each detected service up in a small built-in table of known CVEs (SSH, HTTP and MySQL), shows a proof-of-concept template for those entries and exports results as a PDF or CSV. It's deliberately simple: the CVE table is built in, and the proof-of-concept templates are text, not exploits.",
+      "tags": [
+        "Python",
+        "Flask",
+        "nmap",
+        "ReportLab",
+        "Bootstrap"
+      ],
       "status": "Completed",
       "github": "https://github.com/Sangamesh-dev/VulnXploit",
       "featured": true,
@@ -174,10 +301,30 @@
     }
   ],
   "certifications": [
-    { "name": "PNPT – Practical Network Penetration Tester", "issuer": "TCM Security", "status": "In Progress", "year": "2025" },
-    { "name": "CompTIA Network+ (N10-008)", "issuer": "CompTIA", "status": "Completed", "year": "2024" },
-    { "name": "AWS Academy – Cloud Architecting", "issuer": "Amazon Web Services", "status": "Completed", "year": "2024" },
-    { "name": "Tata Cybersecurity Analyst Job Simulation", "issuer": "Tata Group / Forage", "status": "Completed", "year": "2024" }
+    {
+      "name": "PNPT – Practical Network Penetration Tester",
+      "issuer": "TCM Security",
+      "status": "In Progress",
+      "year": "2025"
+    },
+    {
+      "name": "CompTIA Network+ (N10-008)",
+      "issuer": "CompTIA",
+      "status": "Completed",
+      "year": "2024"
+    },
+    {
+      "name": "AWS Academy – Cloud Architecting",
+      "issuer": "Amazon Web Services",
+      "status": "Completed",
+      "year": "2024"
+    },
+    {
+      "name": "Tata Cybersecurity Analyst Job Simulation",
+      "issuer": "Tata Group / Forage",
+      "status": "Completed",
+      "year": "2024"
+    }
   ],
   "publication": {
     "title": "AlertSphere: Alerting About Disasters and Ensuring Safety Using AI",
@@ -189,8 +336,23 @@
     "url": "https://doi.org/10.1109/ICAMIDA64673.2025.11209472"
   },
   "leadership": [
-    { "role": "Vice President", "org": "ACM NMIT", "period": "Jan 2024 – Jul 2025", "note": "Led 10+ workshops, 200+ participants" },
-    { "role": "Executive Committee", "org": "IEEE NMIT Student Branch", "period": "Dec 2023 – Jul 2025", "note": "Organized 6+ research seminars" },
-    { "role": "Vice Secretary", "org": "IEEE CIS NMIT", "period": "Nov 2023 – Jul 2025", "note": "Grew chapter membership by 30%" }
+    {
+      "role": "Vice President",
+      "org": "ACM NMIT",
+      "period": "Jan 2024 – Jul 2025",
+      "note": "Led 10+ workshops, 200+ participants"
+    },
+    {
+      "role": "Executive Committee",
+      "org": "IEEE NMIT Student Branch",
+      "period": "Dec 2023 – Jul 2025",
+      "note": "Organised 6+ research seminars"
+    },
+    {
+      "role": "Vice Secretary",
+      "org": "IEEE CIS NMIT",
+      "period": "Nov 2023 – Jul 2025",
+      "note": "Grew chapter membership by 30%"
+    }
   ]
 }

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 868" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="vulnxploit-request-map-title vulnxploit-request-map-desc" id="vulnxploit-request-map-root">
+        <title id="vulnxploit-request-map-title">VulnXploit request map</title>
+        <desc id="vulnxploit-request-map-desc">A browser built with vanilla JavaScript and Bootstrap holds all state and calls four independent, stateless Flask routes: a scan route that runs nmap on twelve fixed ports and looks the service name up in a hard-coded three-row table, a PoC route that returns static template text with placeholders filled in, and two export routes that build a PDF and CSV from results the browser posts back; a ledger lists what the code does not do, including validation, exploitation, verification and storage.</desc>
+        <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #vulnxploit-request-map-root { --color-paper:       #f4efe4;
+      --color-node:        #fffcf5;
+      --color-ink:         #14161e;
+      --color-muted:       #474a57;
+      --color-soft:        #5b5e6a;
+      --color-rule:        rgba(20,22,30,0.12);
+      --color-accent:      #1f3bff;
+      --font-sans:   'Geist', system-ui, sans-serif;
+      --font-serif:  'Instrument Serif', 'Times New Roman', serif;
+      --font-mono:   'Geist Mono', ui-monospace, Menlo, monospace; }
+      #vulnxploit-request-map-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #vulnxploit-request-map-root .container { max-width: 1280px; margin: 0 auto; }
+      #vulnxploit-request-map-root .header-eyebrow { font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.75rem; }
+      #vulnxploit-request-map-root .header-eyebrow b { color: var(--color-accent); font-weight: 500; }
+      #vulnxploit-request-map-root .subtitle { font-size: 1rem;
+      line-height: 1.55;
+      color: var(--color-muted);
+      max-width: 72ch; }
+      #vulnxploit-request-map-root .subtitle code { font-family: var(--font-mono); font-size: 0.85em; color: var(--color-ink); }
+      #vulnxploit-request-map-root .diagram-container { width: 100%;
+      overflow-x: auto;
+      border-top: 1px solid var(--color-ink);
+      border-bottom: 1px solid var(--color-rule); }
+      @media print {
+#vulnxploit-request-map-root .diagram-container { overflow-x: visible; }
+}
+      #vulnxploit-request-map-root .nm { font-family: var(--font-sans); font-weight: 600; font-size: 13px; fill: var(--color-ink); }
+      #vulnxploit-request-map-root .sb { font-family: var(--font-mono); font-size: 10px; fill: var(--color-muted); }
+      #vulnxploit-request-map-root .ln { font-family: var(--font-mono); font-size: 10px; fill: var(--color-soft); }
+      #vulnxploit-request-map-root .eb { font-family: var(--font-mono); font-size: 9px; font-weight: 500; letter-spacing: 0.16em; fill: var(--color-muted); }
+      #vulnxploit-request-map-root .al { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em; fill: var(--color-soft); }
+      #vulnxploit-request-map-root .tg { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.08em; }
+      #vulnxploit-request-map-root .lg { font-family: var(--font-sans); font-size: 10px; fill: var(--color-muted); }
+      #vulnxploit-request-map-root .ld { font-family: var(--font-sans); font-size: 11px; fill: var(--color-muted); }
+      #vulnxploit-request-map-root .mk { font-family: var(--font-mono); font-size: 9px; font-weight: 600; }
+      #vulnxploit-request-map-root .co { font-family: var(--font-serif); font-style: italic; font-size: 15px; fill: var(--color-ink); }</style>
+          <pattern id="vulnxploit-request-map-dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="#14161e" fill-opacity="0.14"/>
+          </pattern>
+          <pattern id="vulnxploit-request-map-checker" width="8" height="8" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" fill="#14161e"/>
+            <rect x="4" y="4" width="4" height="4" fill="#14161e"/>
+          </pattern>
+          <marker id="vulnxploit-request-map-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#474a57"/>
+          </marker>
+          <marker id="vulnxploit-request-map-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#1f3bff"/>
+          </marker>
+          <marker id="vulnxploit-request-map-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#14161e"/>
+          </marker>
+        </defs>
+
+        <rect width="100%" height="100%" fill="#f4efe4"/>
+        <rect width="100%" height="100%" fill="url(#vulnxploit-request-map-dots)" opacity="0.6"/>
+
+        <!-- ── Zone labels ────────────────────────────────────────── -->
+        <text x="40" y="60" class="eb">BROWSER · HOLDS ALL STATE</text>
+        <text x="320" y="60" class="eb" style="fill:#1f3bff">FLASK · app.py · 4 INDEPENDENT STATELESS ROUTES</text>
+        <text x="860" y="60" class="eb" text-anchor="end">WHAT EACH ROUTE USES</text>
+        <line x1="40" y1="72" x2="1240" y2="72" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.14"/>
+
+        <!-- Flask focal band -->
+        <rect x="314" y="94" width="520" height="520" rx="8" fill="url(#vulnxploit-request-map-checker)" opacity="0.14"/>
+        <rect x="308" y="88" width="520" height="520" rx="8" fill="#f4efe4"/>
+        <rect x="308" y="88" width="520" height="520" rx="8" fill="#1f3bff" stroke="#1f3bff" stroke-width="1.2" fill-opacity="0.035"/>
+
+        <!-- =================================================================
+             ARROWS
+             ================================================================= -->
+
+        <!-- Requests from browser hub to the three route shapes -->
+        <line x1="256" y1="150" x2="326" y2="150" stroke="#14161e" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow-link)"/>
+        <rect x="258" y="130" width="66" height="12" rx="2" fill="#f4efe4"/>
+        <text x="291" y="139" class="al" text-anchor="middle">POST SCAN</text>
+
+        <line x1="256" y1="372" x2="326" y2="372" stroke="#14161e" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow-link)"/>
+        <rect x="258" y="352" width="66" height="12" rx="2" fill="#f4efe4"/>
+        <text x="291" y="361" class="al" text-anchor="middle">POST POC</text>
+
+        <line x1="256" y1="534" x2="326" y2="534" stroke="#14161e" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow-link)"/>
+        <rect x="258" y="514" width="74" height="12" rx="2" fill="#f4efe4"/>
+        <text x="295" y="523" class="al" text-anchor="middle">POST EXPORT</text>
+
+        <!-- Dashed returns to the browser -->
+        <line x1="326" y1="186" x2="256" y2="186" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <rect x="275" y="190" width="32" height="12" rx="2" fill="#f4efe4"/>
+        <text x="291" y="199" class="al" text-anchor="middle">JSON</text>
+
+        <line x1="326" y1="408" x2="256" y2="408" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <rect x="275" y="412" width="32" height="12" rx="2" fill="#f4efe4"/>
+        <text x="291" y="421" class="al" text-anchor="middle">TEXT</text>
+
+        <line x1="326" y1="570" x2="256" y2="570" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <rect x="275" y="574" width="32" height="12" rx="2" fill="#f4efe4"/>
+        <text x="291" y="583" class="al" text-anchor="middle">FILE</text>
+
+        <!-- /api/scan → nmap (elbow up) -->
+        <path d="M 560 136 L 592 136 Q 600 136 600 128 L 600 110 Q 600 102 608 102 L 616 102" fill="none" stroke="#474a57" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <rect x="548" y="82" width="64" height="12" rx="2" fill="#f4efe4"/>
+        <text x="580" y="91" class="al" text-anchor="middle">12 PORTS</text>
+
+        <!-- nmap → target (active probe, blue) -->
+        <line x1="804" y1="124" x2="848" y2="124" stroke="#1f3bff" stroke-width="1.4" marker-end="url(#vulnxploit-request-map-arrow-accent)"/>
+        <rect x="806" y="104" width="46" height="12" rx="2" fill="#f4efe4"/>
+        <text x="829" y="113" class="al" text-anchor="middle" style="fill:#1f3bff">PROBE</text>
+
+        <!-- /api/scan → CVE table (exits scan bottom, into open band area) -->
+        <path d="M 480 224 L 480 246 Q 480 254 488 254 L 616 254" fill="none" stroke="#474a57" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <rect x="506" y="234" width="84" height="12" rx="2" fill="#f4efe4"/>
+        <text x="548" y="243" class="al" text-anchor="middle">SERVICE NAME</text>
+
+        <!-- /api/generate-poc → templates -->
+        <line x1="560" y1="372" x2="616" y2="372" stroke="#474a57" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <rect x="562" y="352" width="56" height="12" rx="2" fill="#f4efe4"/>
+        <text x="590" y="361" class="al" text-anchor="middle">POC_TYPE</text>
+
+        <!-- /api/export → files -->
+        <line x1="560" y1="534" x2="616" y2="534" stroke="#474a57" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <rect x="564" y="514" width="48" height="12" rx="2" fill="#f4efe4"/>
+        <text x="588" y="523" class="al" text-anchor="middle">RESULTS</text>
+
+        <!-- =================================================================
+             NODES
+             ================================================================= -->
+
+        <!-- Browser hub (person) -->
+        <rect x="40" y="104" width="216" height="486" rx="20" fill="#f4efe4"/>
+        <rect x="40" y="104" width="216" height="486" rx="20" fill="#474a57" stroke="#5b5e6a" stroke-width="1" fill-opacity="0.10"/>
+        <text x="60" y="134" class="nm">Operator browser</text>
+        <text x="60" y="152" class="sb">static/script.js</text>
+        <text x="60" y="176" class="ln">vanilla JS + Bootstrap</text>
+        <text x="60" y="192" class="ln">(both from a CDN)</text>
+        <text x="60" y="216" class="ln">target text box, no format</text>
+        <text x="60" y="232" class="ln">check beyond “non-empty”</text>
+        <text x="60" y="256" class="ln">holds every result in</text>
+        <text x="60" y="272" class="ln">memory; nothing persists</text>
+        <text x="60" y="296" class="ln">calls the 4 routes itself —</text>
+        <text x="60" y="312" class="ln">no server-side orchestration</text>
+        <text x="60" y="336" class="ln">renders the results table</text>
+        <text x="60" y="360" class="ln">counters (scans, vulns,</text>
+        <text x="60" y="376" class="ln">PoCs) start at 0 in JS</text>
+        <line x1="60" y1="398" x2="236" y2="398" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.12"/>
+        <text x="60" y="420" class="sb" style="fill:#14161e">1 · POST /api/scan</text>
+        <text x="60" y="442" class="sb" style="fill:#14161e">2 · POST /api/generate-poc</text>
+        <text x="60" y="464" class="sb" style="fill:#14161e">3 · POST /api/export/pdf</text>
+        <text x="60" y="486" class="sb" style="fill:#14161e">4 · POST /api/export/csv</text>
+        <text x="60" y="520" class="ln">no login · no history</text>
+        <text x="60" y="536" class="ln">no scan queue · synchronous</text>
+        <text x="60" y="560" class="ln">serves from Flask, port 5000</text>
+        <text x="60" y="576" class="ln">debug=True</text>
+
+        <!-- /api/scan (primary route) -->
+        <rect x="326" y="104" width="234" height="120" rx="6" fill="#f4efe4"/>
+        <rect x="326" y="104" width="234" height="120" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <rect x="334" y="112" width="40" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.40"/>
+        <text x="354" y="121" class="tg" text-anchor="middle" fill="#14161e">ROUTE</text>
+        <rect x="524" y="112" width="28" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="538" y="122" class="mk" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="338" y="146" class="nm">/api/scan</text>
+        <text x="338" y="166" class="ln">nmap PortScanner</text>
+        <text x="338" y="182" class="ln">12 fixed ports (22, 80,</text>
+        <text x="338" y="198" class="ln">443, 3306, 5432, …)</text>
+        <text x="338" y="214" class="ln">→ results[] with cves[]</text>
+
+        <!-- /api/generate-poc -->
+        <rect x="326" y="312" width="234" height="120" rx="6" fill="#f4efe4"/>
+        <rect x="326" y="312" width="234" height="120" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <rect x="334" y="320" width="40" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.40"/>
+        <text x="354" y="329" class="tg" text-anchor="middle" fill="#14161e">ROUTE</text>
+        <rect x="524" y="320" width="28" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="538" y="330" class="mk" text-anchor="middle" fill="#14161e">L3</text>
+        <text x="338" y="354" class="nm">/api/generate-poc</text>
+        <text x="338" y="374" class="ln">picks 1 of 3 templates</text>
+        <text x="338" y="390" class="ln">by poc_type</text>
+        <text x="338" y="406" class="ln">fills [TARGET_IP] /</text>
+        <text x="338" y="422" class="ln">[TARGET_PORT] → text</text>
+
+        <!-- /api/export -->
+        <rect x="326" y="490" width="234" height="108" rx="6" fill="#f4efe4"/>
+        <rect x="326" y="490" width="234" height="108" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <rect x="334" y="498" width="40" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.40"/>
+        <text x="354" y="507" class="tg" text-anchor="middle" fill="#14161e">ROUTE</text>
+        <text x="338" y="532" class="nm">/api/export/pdf · /csv</text>
+        <text x="338" y="552" class="ln">ReportLab canvas · pandas</text>
+        <text x="338" y="568" class="ln">built from posted results</text>
+        <text x="338" y="584" class="ln">returns a file download</text>
+
+        <!-- nmap (tool) -->
+        <rect x="616" y="94" width="186" height="60" rx="6" fill="#f4efe4"/>
+        <rect x="616" y="94" width="186" height="60" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="628" y="118" class="nm">nmap</text>
+        <text x="628" y="136" class="ln">python-nmap · must be</text>
+        <text x="628" y="150" class="ln">installed on the host</text>
+
+        <!-- target host -->
+        <rect x="848" y="94" width="186" height="60" rx="6" fill="#fffcf5"/>
+        <rect x="848" y="94" width="186" height="60" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1.4"/>
+        <text x="860" y="118" class="nm">Target host</text>
+        <text x="860" y="136" class="ln">whatever string the</text>
+        <text x="860" y="150" class="ln">operator typed</text>
+
+        <!-- CVE table (in-code) -->
+        <rect x="616" y="214" width="186" height="80" rx="6" fill="#f4efe4"/>
+        <rect x="616" y="214" width="186" height="80" rx="6" fill="#14161e" stroke="#474a57" stroke-width="1" fill-opacity="0.05"/>
+        <rect x="628" y="222" width="52" height="12" rx="2" fill="none" stroke="#474a57" stroke-width="0.8" stroke-opacity="0.50"/>
+        <text x="654" y="231" class="tg" text-anchor="middle" fill="#474a57">IN-CODE</text>
+        <rect x="1006" y="222" width="28" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="1020" y="232" class="mk" text-anchor="middle" fill="#14161e">L2</text>
+        <text x="628" y="256" class="nm">CVE_DATABASE</text>
+        <text x="628" y="274" class="ln">dict of 3 services:</text>
+        <text x="628" y="288" class="ln">ssh · http · mysql</text>
+
+        <!-- PoC templates (in-code) -->
+        <rect x="616" y="342" width="186" height="80" rx="6" fill="#f4efe4"/>
+        <rect x="616" y="342" width="186" height="80" rx="6" fill="#14161e" stroke="#474a57" stroke-width="1" fill-opacity="0.05"/>
+        <rect x="628" y="350" width="52" height="12" rx="2" fill="none" stroke="#474a57" stroke-width="0.8" stroke-opacity="0.50"/>
+        <text x="654" y="359" class="tg" text-anchor="middle" fill="#474a57">IN-CODE</text>
+        <text x="628" y="384" class="nm">POC_TEMPLATES</text>
+        <text x="628" y="402" class="ln">3 static code strings,</text>
+        <text x="628" y="416" class="ln">placeholder values only</text>
+
+        <!-- output files -->
+        <rect x="616" y="504" width="186" height="80" rx="6" fill="#f4efe4"/>
+        <rect x="616" y="504" width="186" height="80" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="628" y="528" class="nm">PDF · CSV</text>
+        <text x="628" y="546" class="ln">file downloads only</text>
+        <text x="628" y="562" class="ln">no server-side copy kept</text>
+        <text x="628" y="578" class="ln">generated per request</text>
+
+        <!-- Editorial callouts (right column) -->
+        <line x1="876" y1="200" x2="876" y2="272" stroke="#14161e" stroke-width="1"/>
+        <text x="888" y="214" class="co">Detection matches the</text>
+        <text x="888" y="232" class="co">service name, not the</text>
+        <text x="888" y="250" class="co">version — only ssh, http</text>
+        <text x="888" y="268" class="co">and mysql can match.</text>
+
+        <line x1="876" y1="356" x2="876" y2="410" stroke="#14161e" stroke-width="1"/>
+        <text x="888" y="370" class="co">“PoC generation” returns</text>
+        <text x="888" y="388" class="co">template text. No exploit</text>
+        <text x="888" y="406" class="co">is run and no finding is</text>
+        <text x="888" y="424" class="co">verified as exploitable.</text>
+
+        <!-- =================================================================
+             LEDGER
+             ================================================================= -->
+        <line x1="40" y1="640" x2="1240" y2="640" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.14"/>
+        <text x="40" y="662" class="eb">WHAT THE CODE DOES NOT DO · FOUND BY READING THE SOURCE</text>
+
+        <rect x="40" y="678" width="24" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="52" y="688" class="mk" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="74" y="689" class="ld">No validation, authorisation or scope control. /api/scan accepts any target</text>
+        <text x="74" y="705" class="ld">string and scans it. No private-range block, no auth, no rate limit; debug=True.</text>
+
+        <rect x="636" y="678" width="24" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="648" y="688" class="mk" text-anchor="middle" fill="#14161e">L2</text>
+        <text x="670" y="689" class="ld">No real CVE lookup. Matching is a hard-coded 3-row dict keyed by nmap’s</text>
+        <text x="670" y="705" class="ld">service name. The version field is read but never used in the match.</text>
+
+        <rect x="40" y="718" width="24" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="52" y="728" class="mk" text-anchor="middle" fill="#14161e">L3</text>
+        <text x="74" y="729" class="ld">No exploitation or verification. The PoC route returns static template text</text>
+        <text x="74" y="745" class="ld">with placeholders filled in; nothing is executed and no result is confirmed.</text>
+
+        <rect x="636" y="718" width="24" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="648" y="728" class="mk" text-anchor="middle" fill="#14161e">L4</text>
+        <text x="670" y="729" class="ld">No storage, history or tests. package-lock.json lists React + axios, but the</text>
+        <text x="670" y="745" class="ld">UI is vanilla JS + Bootstrap and there is no Node server; node_modules is unused.</text>
+
+        <!-- =================================================================
+             LEGEND
+             ================================================================= -->
+        <line x1="40" y1="772" x2="1240" y2="772" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.12"/>
+        <text x="40" y="800" class="eb">LEGEND</text>
+
+        <rect x="112" y="791" width="22" height="12" rx="6" fill="#474a57" stroke="#5b5e6a" stroke-width="1" fill-opacity="0.10"/>
+        <text x="140" y="800" class="lg">Person</text>
+
+        <rect x="200" y="791" width="16" height="12" rx="2" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="222" y="800" class="lg">Flask route</text>
+
+        <rect x="304" y="791" width="16" height="12" rx="2" fill="#14161e" stroke="#474a57" stroke-width="1" fill-opacity="0.05"/>
+        <text x="326" y="800" class="lg">In-code data</text>
+
+        <rect x="412" y="791" width="16" height="12" rx="2" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="434" y="800" class="lg">Tool / file</text>
+
+        <line x1="512" y1="797" x2="536" y2="797" stroke="#1f3bff" stroke-width="1.4" marker-end="url(#vulnxploit-request-map-arrow-accent)"/>
+        <text x="544" y="800" class="lg">Active probe of target</text>
+
+        <line x1="684" y1="797" x2="708" y2="797" stroke="#14161e" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow-link)"/>
+        <text x="716" y="800" class="lg">Request (HTTP)</text>
+
+        <line x1="820" y1="797" x2="844" y2="797" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <text x="852" y="800" class="lg">Response</text>
+
+        <line x1="928" y1="797" x2="952" y2="797" stroke="#474a57" stroke-width="1.2" marker-end="url(#vulnxploit-request-map-arrow)"/>
+        <text x="960" y="800" class="lg">Internal call</text>
+
+        <rect x="1052" y="790" width="24" height="14" rx="2" fill="none" stroke="#14161e" stroke-width="0.8"/>
+        <text x="1064" y="800" class="mk" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="1082" y="800" class="lg">Limit (see ledger)</text>
+      </svg>

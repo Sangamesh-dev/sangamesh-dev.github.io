@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1360 912" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bytehunter-verdict-anatomy-title bytehunter-verdict-anatomy-desc" id="bytehunter-verdict-anatomy-root">
+        <title id="bytehunter-verdict-anatomy-title">ByteHunter verdict anatomy</title>
+        <desc id="bytehunter-verdict-anatomy-desc">An uploaded file is checked against a SHA-256 cache, parsed with LIEF into a 2,381-value vector and scored by LightGBM, or by a heuristic scorer when no LightGBM model loads; that single score maps to SAFE, SUSPICIOUS or MALICIOUS, while SHAP, Random Forest and Logistic Regression comparison, an XGBoost family classifier and an import-name lookup only annotate the result, which is stored in SQLite for history and PDF reports.</desc>
+        <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #bytehunter-verdict-anatomy-root { --color-paper:       #f4efe4;
+      --color-node:        #fffcf5;
+      --color-ink:         #14161e;
+      --color-muted:       #474a57;
+      --color-soft:        #5b5e6a;
+      --color-rule:        rgba(20,22,30,0.12);
+      --color-accent:      #1f3bff;
+      --font-sans:   'Geist', system-ui, sans-serif;
+      --font-serif:  'Instrument Serif', 'Times New Roman', serif;
+      --font-mono:   'Geist Mono', ui-monospace, Menlo, monospace; }
+      #bytehunter-verdict-anatomy-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #bytehunter-verdict-anatomy-root .container { max-width: 1360px; margin: 0 auto; }
+      #bytehunter-verdict-anatomy-root .header-eyebrow { font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.75rem; }
+      #bytehunter-verdict-anatomy-root .header-eyebrow b { color: var(--color-accent); font-weight: 500; }
+      #bytehunter-verdict-anatomy-root .subtitle { font-size: 1rem;
+      line-height: 1.55;
+      color: var(--color-muted);
+      max-width: 72ch; }
+      #bytehunter-verdict-anatomy-root .subtitle code { font-family: var(--font-mono); font-size: 0.85em; color: var(--color-ink); }
+      #bytehunter-verdict-anatomy-root .diagram-container { width: 100%;
+      overflow-x: auto;
+      border-top: 1px solid var(--color-ink);
+      border-bottom: 1px solid var(--color-rule); }
+      @media print {
+#bytehunter-verdict-anatomy-root .diagram-container { overflow-x: visible; }
+}
+      #bytehunter-verdict-anatomy-root .nm { font-family: var(--font-sans); font-weight: 600; font-size: 13px; fill: var(--color-ink); }
+      #bytehunter-verdict-anatomy-root .nd { font-family: var(--font-sans); font-weight: 600; font-size: 11px; fill: var(--color-ink); }
+      #bytehunter-verdict-anatomy-root .sb { font-family: var(--font-mono); font-size: 10px; fill: var(--color-muted); }
+      #bytehunter-verdict-anatomy-root .ln { font-family: var(--font-mono); font-size: 10px; fill: var(--color-soft); }
+      #bytehunter-verdict-anatomy-root .eb { font-family: var(--font-mono); font-size: 9px; font-weight: 500; letter-spacing: 0.16em; fill: var(--color-muted); }
+      #bytehunter-verdict-anatomy-root .al { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em; fill: var(--color-soft); }
+      #bytehunter-verdict-anatomy-root .tg { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.08em; }
+      #bytehunter-verdict-anatomy-root .lg { font-family: var(--font-sans); font-size: 10px; fill: var(--color-muted); }
+      #bytehunter-verdict-anatomy-root .ld { font-family: var(--font-sans); font-size: 11px; fill: var(--color-muted); }
+      #bytehunter-verdict-anatomy-root .vs { font-family: var(--font-sans); font-weight: 600; font-size: 11px; }
+      #bytehunter-verdict-anatomy-root .vr { font-family: var(--font-mono); font-size: 9px; }
+      #bytehunter-verdict-anatomy-root .co { font-family: var(--font-serif); font-style: italic; font-size: 15px; fill: var(--color-ink); }</style>
+          <pattern id="bytehunter-verdict-anatomy-dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="#14161e" fill-opacity="0.14"/>
+          </pattern>
+          <pattern id="bytehunter-verdict-anatomy-checker" width="8" height="8" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" fill="#14161e"/>
+            <rect x="4" y="4" width="4" height="4" fill="#14161e"/>
+          </pattern>
+          <marker id="bytehunter-verdict-anatomy-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#474a57"/>
+          </marker>
+          <marker id="bytehunter-verdict-anatomy-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#1f3bff"/>
+          </marker>
+          <marker id="bytehunter-verdict-anatomy-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#14161e"/>
+          </marker>
+        </defs>
+
+        <!-- Background: cream paper + quiet dot matrix -->
+        <rect width="100%" height="100%" fill="#f4efe4"/>
+        <rect width="100%" height="100%" fill="url(#bytehunter-verdict-anatomy-dots)" opacity="0.6"/>
+
+        <!-- ── Band labels ────────────────────────────────────────── -->
+        <text x="40" y="72" class="eb">ANNOTATES THE RESULT · NEVER CHANGES THE VERDICT</text>
+        <line x1="40" y1="88" x2="1320" y2="88" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.14"/>
+        <rect x="40" y="306" width="1280" height="160" rx="8" fill="#1f3bff" stroke="none" fill-opacity="0.025"/>
+        <text x="40" y="324" class="eb" style="fill:#1f3bff">DECIDES THE VERDICT</text>
+
+        <!-- =================================================================
+             ARROWS (behind nodes)
+             ================================================================= -->
+
+        <!-- 1 upload → cache gate -->
+        <line x1="40" y1="390" x2="162" y2="390" stroke="#14161e" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow-link)"/>
+        <rect x="70" y="370" width="44" height="12" rx="2" fill="#f4efe4"/>
+        <text x="92" y="379" class="al" text-anchor="middle">UPLOAD</text>
+
+        <!-- 2 cache miss → LIEF -->
+        <line x1="276" y1="390" x2="318" y2="390" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="282" y="370" width="30" height="12" rx="2" fill="#f4efe4"/>
+        <text x="297" y="379" class="al" text-anchor="middle">MISS</text>
+
+        <!-- 3 LIEF imports → API lookup -->
+        <path d="M 320 352 L 276 352 Q 268 352 268 344 L 268 242" fill="none" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="184" y="270" width="76" height="12" rx="2" fill="#f4efe4"/>
+        <text x="222" y="279" class="al" text-anchor="middle">IMPORT NAMES</text>
+
+        <!-- 4 vector → RF + LR -->
+        <line x1="430" y1="336" x2="430" y2="242" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="438" y="270" width="68" height="12" rx="2" fill="#f4efe4"/>
+        <text x="472" y="279" class="al" text-anchor="middle">SAME VECTOR</text>
+
+        <!-- 5 LIEF → LightGBM -->
+        <line x1="540" y1="390" x2="598" y2="390" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="548" y="370" width="42" height="12" rx="2" fill="#f4efe4"/>
+        <text x="569" y="379" class="al" text-anchor="middle">VECTOR</text>
+
+        <!-- 6 LightGBM → SHAP -->
+        <line x1="710" y1="330" x2="710" y2="242" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="718" y="270" width="52" height="12" rx="2" fill="#f4efe4"/>
+        <text x="744" y="279" class="al" text-anchor="middle">EXPLAINS</text>
+
+        <!-- 7 LightGBM → verdict (headline) -->
+        <line x1="820" y1="390" x2="878" y2="390" stroke="#1f3bff" stroke-width="1.4" marker-end="url(#bytehunter-verdict-anatomy-arrow-accent)"/>
+        <rect x="828" y="370" width="36" height="12" rx="2" fill="#f4efe4"/>
+        <text x="846" y="379" class="al" text-anchor="middle" style="fill:#1f3bff">SCORE</text>
+
+        <!-- 8 verdict → XGBoost (gated) -->
+        <line x1="1100" y1="330" x2="1100" y2="242" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="1016" y="270" width="76" height="12" rx="2" fill="#f4efe4"/>
+        <text x="1054" y="279" class="al" text-anchor="middle">IF SCORE &gt; 50</text>
+
+        <!-- 9 LightGBM → heuristic fallback (conditional) -->
+        <line x1="710" y1="450" x2="710" y2="558" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="718" y="498" width="52" height="12" rx="2" fill="#f4efe4"/>
+        <text x="744" y="507" class="al" text-anchor="middle">NO MODEL</text>
+
+        <!-- 10 heuristic → verdict -->
+        <path d="M 820 600 L 952 600 Q 960 600 960 592 L 960 452" fill="none" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="854" y="580" width="60" height="12" rx="2" fill="#f4efe4"/>
+        <text x="884" y="589" class="al" text-anchor="middle">HEURISTIC</text>
+
+        <!-- 11 verdict → SQLite (save) -->
+        <path d="M 1040 450 L 1040 712 Q 1040 720 1032 720 L 176 720 Q 168 720 168 712 L 168 682" fill="none" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="560" y="700" width="68" height="12" rx="2" fill="#f4efe4"/>
+        <text x="594" y="709" class="al" text-anchor="middle">SAVE RESULT</text>
+
+        <!-- 12 SQLite → cache gate (hit) -->
+        <line x1="220" y1="558" x2="220" y2="436" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <rect x="228" y="494" width="64" height="12" rx="2" fill="#f4efe4"/>
+        <text x="260" y="503" class="al" text-anchor="middle">SHA-256 HIT</text>
+
+        <!-- Upload constraints (caption under the entry arrow) -->
+        <text x="40" y="426" class="sb">POST /api/analyze</text>
+        <text x="40" y="442" class="ln">≤ 5 files, ≤ 50 MB</text>
+        <text x="40" y="458" class="ln">any file type</text>
+
+        <!-- =================================================================
+             NODES
+             ================================================================= -->
+
+        <!-- Cache gate (decision) -->
+        <polygon points="220,346 276,390 220,434 164,390" fill="#f4efe4"/>
+        <polygon points="220,346 276,390 220,434 164,390" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="220" y="387" class="nd" text-anchor="middle">Seen</text>
+        <text x="220" y="401" class="nd" text-anchor="middle">SHA-256?</text>
+
+        <!-- LIEF features -->
+        <rect x="320" y="336" width="220" height="108" rx="6" fill="#f4efe4"/>
+        <rect x="320" y="336" width="220" height="108" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="332" y="360" class="nm">LIEF features</text>
+        <rect x="506" y="345" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="517" y="354" class="tg" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="332" y="376" class="sb">lief.PE.parse(bytes)</text>
+        <text x="332" y="396" class="ln">2,005 values + zero pad</text>
+        <text x="332" y="412" class="ln">= 2,381-dim vector</text>
+        <text x="332" y="428" class="ln">non-PE: entropy + histogram</text>
+
+        <!-- LightGBM (FOCAL) -->
+        <rect x="606" y="336" width="220" height="120" rx="6" fill="url(#bytehunter-verdict-anatomy-checker)" opacity="0.22"/>
+        <rect x="600" y="330" width="220" height="120" rx="6" fill="#f4efe4"/>
+        <rect x="600" y="330" width="220" height="120" rx="6" fill="#1f3bff" stroke="#1f3bff" stroke-width="1.2" fill-opacity="0.07"/>
+        <rect x="608" y="338" width="76" height="12" rx="2" fill="none" stroke="#1f3bff" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="646" y="347" class="tg" text-anchor="middle" fill="#1f3bff">PRIMARY SCORE</text>
+        <rect x="788" y="338" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="799" y="347" class="tg" text-anchor="middle" fill="#14161e">L2</text>
+        <text x="612" y="372" class="nm">LightGBM</text>
+        <text x="612" y="388" class="sb">ember_model_2018 (pre-trained)</text>
+        <text x="612" y="408" class="ln">p(malicious) × 100</text>
+        <text x="612" y="424" class="ln">hot-swap: models/pending, 24 h</text>
+        <text x="612" y="440" class="ln">loaded at startup if present</text>
+
+        <!-- Verdict thresholds -->
+        <rect x="880" y="330" width="440" height="120" rx="6" fill="#f4efe4"/>
+        <rect x="880" y="330" width="440" height="120" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="892" y="356" class="nm">Verdict + risk level</text>
+        <text x="892" y="372" class="sb">same thresholds for model or heuristic score</text>
+        <rect x="896" y="386" width="122" height="48" fill="#14161e" stroke="#14161e" stroke-width="0.8" fill-opacity="0.05" stroke-opacity="0.30"/>
+        <rect x="1018" y="386" width="143" height="48" fill="#14161e" stroke="#14161e" stroke-width="0.8" fill-opacity="0.14" stroke-opacity="0.30"/>
+        <rect x="1161" y="386" width="143" height="48" fill="#14161e" stroke="#14161e" stroke-width="0.8"/>
+        <text x="957" y="406" class="vs" text-anchor="middle" fill="#14161e">SAFE</text>
+        <text x="957" y="422" class="vr" text-anchor="middle" fill="#474a57">&lt; 30 · LOW</text>
+        <text x="1089" y="406" class="vs" text-anchor="middle" fill="#14161e">SUSPICIOUS</text>
+        <text x="1089" y="422" class="vr" text-anchor="middle" fill="#474a57">30–65 · MEDIUM</text>
+        <text x="1232" y="406" class="vs" text-anchor="middle" fill="#f4efe4">MALICIOUS</text>
+        <text x="1232" y="422" class="vr" text-anchor="middle" fill="#f4efe4">&gt; 65 · HIGH</text>
+
+        <!-- API lookup (annotator) -->
+        <rect x="40" y="132" width="256" height="108" rx="6" fill="#f4efe4"/>
+        <rect x="40" y="132" width="256" height="108" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="52" y="156" class="nm">API lookup</text>
+        <rect x="262" y="141" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="273" y="150" class="tg" text-anchor="middle" fill="#14161e">L4</text>
+        <text x="52" y="172" class="sb">10 named imports → tags</text>
+        <text x="52" y="192" class="ln">CreateRemoteThread → injection</text>
+        <text x="52" y="208" class="ln">IsDebuggerPresent → anti-debug</text>
+        <text x="52" y="224" class="ln">static references, not runtime</text>
+
+        <!-- RF + LR comparison (annotator) -->
+        <rect x="320" y="132" width="220" height="108" rx="6" fill="#f4efe4"/>
+        <rect x="320" y="132" width="220" height="108" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="332" y="156" class="nm">RF + Logistic Reg.</text>
+        <text x="332" y="172" class="sb">predict_proba × 100</text>
+        <text x="332" y="192" class="ln">agreement % across scores</text>
+        <text x="332" y="208" class="ln">warning if σ of scores &gt; 20</text>
+        <text x="332" y="224" class="ln">not used in the verdict</text>
+
+        <!-- SHAP (annotator) -->
+        <rect x="600" y="132" width="220" height="108" rx="6" fill="#f4efe4"/>
+        <rect x="600" y="132" width="220" height="108" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="612" y="156" class="nm">SHAP</text>
+        <rect x="788" y="141" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="799" y="150" class="tg" text-anchor="middle" fill="#14161e">L3</text>
+        <text x="612" y="172" class="sb">TreeExplainer on LightGBM</text>
+        <text x="612" y="192" class="ln">top 8 |SHAP| features</text>
+        <text x="612" y="208" class="ln">→ grouped explanation text</text>
+        <text x="612" y="224" class="ln">no explainer: entropy proxy</text>
+
+        <!-- XGBoost (annotator) -->
+        <rect x="880" y="132" width="240" height="108" rx="6" fill="#f4efe4"/>
+        <rect x="880" y="132" width="240" height="108" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="892" y="156" class="nm">XGBoost family</text>
+        <text x="892" y="172" class="sb">BIG-2015 · 9 families</text>
+        <text x="892" y="192" class="ln">258 raw-byte features,</text>
+        <text x="892" y="208" class="ln">not the 2,381 vector</text>
+        <text x="892" y="224" class="ln">→ Worm, Adware, Backdoor…</text>
+
+        <!-- Heuristic fallback (distinct: dashed) -->
+        <rect x="600" y="560" width="220" height="120" rx="6" fill="#f4efe4"/>
+        <rect x="600" y="560" width="220" height="120" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" stroke-dasharray="4,3" fill-opacity="0.02"/>
+        <rect x="608" y="568" width="100" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.40"/>
+        <text x="658" y="577" class="tg" text-anchor="middle" fill="#14161e">HEURISTIC · NOT ML</text>
+        <text x="612" y="602" class="nm">Heuristic scorer</text>
+        <text x="612" y="618" class="sb">if LightGBM missing or fails</text>
+        <text x="612" y="638" class="ln">ext/magic mismatch +20</text>
+        <text x="612" y="654" class="ln">entropy &gt; 7.2 +25 · strings</text>
+        <text x="612" y="670" class="ln">embedded MZ +20 · cap 100</text>
+
+        <!-- SQLite store -->
+        <rect x="40" y="560" width="256" height="120" rx="6" fill="#f4efe4"/>
+        <rect x="40" y="560" width="256" height="120" rx="6" fill="#14161e" stroke="#474a57" stroke-width="1" fill-opacity="0.05"/>
+        <rect x="52" y="568" width="38" height="12" rx="2" fill="none" stroke="#474a57" stroke-width="0.8" stroke-opacity="0.50"/>
+        <text x="71" y="577" class="tg" text-anchor="middle" fill="#474a57">STORE</text>
+        <text x="52" y="602" class="nm">SQLite scans</text>
+        <text x="52" y="618" class="sb">UNIQUE sha256 · result_json</text>
+        <text x="52" y="638" class="ln">GET /api/history[/{id}]</text>
+        <text x="52" y="654" class="ln">GET /api/report/{id} → PDF</text>
+        <text x="52" y="670" class="ln">ReportLab, from stored JSON</text>
+
+        <!-- Editorial callouts -->
+        <line x1="1156" y1="134" x2="1156" y2="206" stroke="#14161e" stroke-width="1"/>
+        <text x="1168" y="148" class="co">Only one number sets</text>
+        <text x="1168" y="166" class="co">the verdict: LightGBM’s</text>
+        <text x="1168" y="184" class="co">score, or the heuristic</text>
+        <text x="1168" y="202" class="co">when LightGBM can’t run.</text>
+
+        <line x1="1072" y1="578" x2="1072" y2="668" stroke="#14161e" stroke-width="1"/>
+        <text x="1084" y="592" class="co">The repository ships no</text>
+        <text x="1084" y="610" class="co">LightGBM, XGBoost or SHAP</text>
+        <text x="1084" y="628" class="co">files, so a fresh checkout</text>
+        <text x="1084" y="646" class="co">scores every file with</text>
+        <text x="1084" y="664" class="co">the heuristic scorer.</text>
+
+        <!-- =================================================================
+             VERIFIED LIMITS LEDGER
+             ================================================================= -->
+        <line x1="40" y1="752" x2="1320" y2="752" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.14"/>
+        <text x="40" y="774" class="eb">VERIFIED LIMITS · FOUND IN CODE, NOT STATED IN THE README</text>
+
+        <rect x="40" y="790" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="51" y="799" class="tg" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="72" y="800" class="ld">The vector is a custom layout padded to 2,381, not EMBER’s published feature</text>
+        <text x="72" y="816" class="ld">order, and imports are hashed with Python’s per-process hash(). Not validated.</text>
+
+        <rect x="700" y="790" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="711" y="799" class="tg" text-anchor="middle" fill="#14161e">L2</text>
+        <text x="732" y="800" class="ld">Without ember_model_2018 the heuristic score is used, but the response</text>
+        <text x="732" y="816" class="ld">still reports model_used = “LightGBM — EMBER 2018”.</text>
+
+        <rect x="40" y="832" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="51" y="841" class="tg" text-anchor="middle" fill="#14161e">L3</text>
+        <text x="72" y="842" class="ld">The API response drops shap_features and warning_signs, so the dashboard’s</text>
+        <text x="72" y="858" class="ld">SHAP chart does not render; SHAP reaches users only as grouped text.</text>
+
+        <rect x="700" y="832" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="711" y="841" class="tg" text-anchor="middle" fill="#14161e">L4</text>
+        <text x="732" y="842" class="ld">Exact name matching: RegSetValueEx, URLDownloadToFile and InternetOpenUrl</text>
+        <text x="732" y="858" class="ld">lack the A/W suffix real imports carry, so those three never match.</text>
+
+        <!-- =================================================================
+             LEGEND
+             ================================================================= -->
+        <line x1="40" y1="876" x2="1320" y2="876" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.12"/>
+        <text x="40" y="900" class="eb">LEGEND</text>
+
+        <polygon points="120,885 128,891 120,897 112,891" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="134" y="895" class="lg">Decision</text>
+
+        <rect x="196" y="885" width="16" height="12" rx="2" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="218" y="895" class="lg">Pipeline step</text>
+
+        <rect x="306" y="885" width="16" height="12" rx="2" fill="#1f3bff" stroke="#1f3bff" stroke-width="1.2" fill-opacity="0.07"/>
+        <text x="328" y="895" class="lg">Primary score</text>
+
+        <rect x="420" y="885" width="16" height="12" rx="2" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="442" y="895" class="lg">Annotator</text>
+
+        <rect x="514" y="885" width="16" height="12" rx="2" fill="#14161e" stroke="#14161e" stroke-width="1" stroke-dasharray="4,3" fill-opacity="0.02"/>
+        <text x="536" y="895" class="lg">Heuristic, not ML</text>
+
+        <rect x="646" y="885" width="16" height="12" rx="2" fill="#14161e" stroke="#474a57" stroke-width="1" fill-opacity="0.05"/>
+        <text x="668" y="895" class="lg">Store</text>
+
+        <line x1="720" y1="891" x2="744" y2="891" stroke="#1f3bff" stroke-width="1.4" marker-end="url(#bytehunter-verdict-anatomy-arrow-accent)"/>
+        <text x="752" y="895" class="lg">Verdict score</text>
+
+        <line x1="840" y1="891" x2="864" y2="891" stroke="#474a57" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <text x="872" y="895" class="lg">Data flow</text>
+
+        <line x1="940" y1="891" x2="964" y2="891" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#bytehunter-verdict-anatomy-arrow)"/>
+        <text x="972" y="895" class="lg">Conditional</text>
+
+        <line x1="1052" y1="891" x2="1076" y2="891" stroke="#14161e" stroke-width="1.2" marker-end="url(#bytehunter-verdict-anatomy-arrow-link)"/>
+        <text x="1084" y="895" class="lg">HTTP</text>
+
+        <rect x="1130" y="885" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="1141" y="894" class="tg" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="1158" y="895" class="lg">Verified limit</text>
+      </svg>

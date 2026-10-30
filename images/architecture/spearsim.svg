@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1360 964" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="spearsim-data-boundaries-title spearsim-data-boundaries-desc" id="spearsim-data-boundaries-root">
+        <title id="spearsim-data-boundaries-title">SpearSim campaign data boundaries</title>
+        <desc id="spearsim-data-boundaries-desc">An admin console drives a FastAPI campaign API that pseudonymises employees and gates launch on recorded consent; an email pipeline sends only aliases and roles to Groq and real addresses to SendGrid; employees interact through public tracking endpoints that record event flags and quiz scores in Supabase Postgres, which a retention Edge Function purges after 90 days; four verified implementation limits are listed.</desc>
+        <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #spearsim-data-boundaries-root { --color-paper:       #f4efe4;
+      --color-node:        #fffcf5;
+      --color-ink:         #14161e;
+      --color-muted:       #474a57;
+      --color-soft:        #5b5e6a;
+      --color-rule:        rgba(20,22,30,0.12);
+      --color-accent:      #1f3bff;
+      --font-sans:   'Geist', system-ui, sans-serif;
+      --font-serif:  'Instrument Serif', 'Times New Roman', serif;
+      --font-mono:   'Geist Mono', ui-monospace, Menlo, monospace; }
+      #spearsim-data-boundaries-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #spearsim-data-boundaries-root .container { max-width: 1360px; margin: 0 auto; }
+      #spearsim-data-boundaries-root .header-eyebrow { font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.75rem; }
+      #spearsim-data-boundaries-root .header-eyebrow b { color: var(--color-accent); font-weight: 500; }
+      #spearsim-data-boundaries-root .subtitle { font-size: 1rem;
+      line-height: 1.55;
+      color: var(--color-muted);
+      max-width: 72ch; }
+      #spearsim-data-boundaries-root .subtitle code { font-family: var(--font-mono); font-size: 0.85em; color: var(--color-ink); }
+      #spearsim-data-boundaries-root .diagram-container { width: 100%;
+      overflow-x: auto;
+      border-top: 1px solid var(--color-ink);
+      border-bottom: 1px solid var(--color-rule); }
+      @media print {
+#spearsim-data-boundaries-root .diagram-container { overflow-x: visible; }
+}
+      #spearsim-data-boundaries-root .nm { font-family: var(--font-sans); font-weight: 600; font-size: 13px; fill: var(--color-ink); }
+      #spearsim-data-boundaries-root .sb { font-family: var(--font-mono); font-size: 10px; fill: var(--color-muted); }
+      #spearsim-data-boundaries-root .ln { font-family: var(--font-mono); font-size: 10px; fill: var(--color-soft); }
+      #spearsim-data-boundaries-root .lk { font-family: var(--font-mono); font-size: 10px; font-weight: 500; fill: var(--color-ink); }
+      #spearsim-data-boundaries-root .eb { font-family: var(--font-mono); font-size: 9px; font-weight: 500; letter-spacing: 0.16em; fill: var(--color-muted); }
+      #spearsim-data-boundaries-root .al { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em; fill: var(--color-soft); }
+      #spearsim-data-boundaries-root .tg { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.08em; }
+      #spearsim-data-boundaries-root .lg { font-family: var(--font-sans); font-size: 10px; fill: var(--color-muted); }
+      #spearsim-data-boundaries-root .ld { font-family: var(--font-sans); font-size: 11px; fill: var(--color-muted); }
+      #spearsim-data-boundaries-root .rl { font-family: var(--font-sans); font-size: 11.5px; fill: var(--color-ink); }
+      #spearsim-data-boundaries-root .rn { font-family: var(--font-mono); font-size: 10px; font-weight: 600; fill: var(--color-accent); }
+      #spearsim-data-boundaries-root .co { font-family: var(--font-serif); font-style: italic; font-size: 15px; fill: var(--color-ink); }</style>
+          <pattern id="spearsim-data-boundaries-dots" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.9" fill="#14161e" fill-opacity="0.14"/>
+          </pattern>
+          <pattern id="spearsim-data-boundaries-checker" width="8" height="8" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" fill="#14161e"/>
+            <rect x="4" y="4" width="4" height="4" fill="#14161e"/>
+          </pattern>
+          <marker id="spearsim-data-boundaries-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#474a57"/>
+          </marker>
+          <marker id="spearsim-data-boundaries-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#1f3bff"/>
+          </marker>
+          <marker id="spearsim-data-boundaries-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#14161e"/>
+          </marker>
+        </defs>
+
+        <!-- Background: cream paper + quiet dot matrix -->
+        <rect width="100%" height="100%" fill="#f4efe4"/>
+        <rect width="100%" height="100%" fill="url(#spearsim-data-boundaries-dots)" opacity="0.6"/>
+
+        <!-- ── Lifecycle rail ─────────────────────────────────────── -->
+        <text x="40" y="56" class="eb">LIFECYCLE</text>
+        <text x="132" y="56" class="rl"><tspan class="rn">01</tspan><tspan dx="6">Org + campaign</tspan><tspan dx="10" fill="#5b5e6a">→</tspan><tspan dx="10" class="rn">02</tspan><tspan dx="6">CSV → aliases</tspan><tspan dx="10" fill="#5b5e6a">→</tspan><tspan dx="10" class="rn">03</tspan><tspan dx="6">Consent gate</tspan><tspan dx="10" fill="#5b5e6a">→</tspan><tspan dx="10" class="rn">04</tspan><tspan dx="6">Generate</tspan><tspan dx="10" fill="#5b5e6a">→</tspan><tspan dx="10" class="rn">05</tspan><tspan dx="6">Send</tspan><tspan dx="10" fill="#5b5e6a">→</tspan><tspan dx="10" class="rn">06</tspan><tspan dx="6">Open · click · cred</tspan><tspan dx="10" fill="#5b5e6a">→</tspan><tspan dx="10" class="rn">07</tspan><tspan dx="6">Awareness quiz</tspan><tspan dx="10" fill="#5b5e6a">→</tspan><tspan dx="10" class="rn">08</tspan><tspan dx="6">Report + advice</tspan></text>
+        <line x1="40" y1="76" x2="1320" y2="76" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.14"/>
+
+        <!-- ── Trust zones (painted first) ──────────────────────────── -->
+        <rect x="364" y="112" width="648" height="148" rx="8" fill="#14161e" stroke="#14161e" stroke-width="1" stroke-dasharray="6,4" fill-opacity="0.02" stroke-opacity="0.28"/>
+        <text x="376" y="132" class="eb">THIRD-PARTY PROCESSORS</text>
+
+        <rect x="244" y="304" width="872" height="256" rx="8" fill="none" stroke="#14161e" stroke-width="1" stroke-dasharray="6,4" stroke-opacity="0.28"/>
+        <text x="1104" y="324" class="eb" text-anchor="end">SPEARSIM BACKEND · FASTAPI + CELERY / REDIS</text>
+
+        <rect x="32" y="600" width="1084" height="160" rx="8" fill="none" stroke="#14161e" stroke-width="1" stroke-dasharray="6,4" stroke-opacity="0.28"/>
+        <text x="44" y="618" class="eb">SUPABASE</text>
+
+        <!-- =================================================================
+             ARROWS (behind nodes)
+             ================================================================= -->
+
+        <!-- 1 Admin → API -->
+        <line x1="216" y1="384" x2="258" y2="384" stroke="#14161e" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow-link)"/>
+        <rect x="222" y="364" width="28" height="12" rx="2" fill="#f4efe4"/>
+        <text x="236" y="373" class="al" text-anchor="middle">JWT</text>
+
+        <!-- 2 API → pipeline -->
+        <line x1="500" y1="384" x2="558" y2="384" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="510" y="364" width="40" height="12" rx="2" fill="#f4efe4"/>
+        <text x="530" y="373" class="al" text-anchor="middle">LAUNCH</text>
+
+        <!-- 11 API → Groq (report remediation) -->
+        <line x1="440" y1="336" x2="440" y2="250" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="368" y="278" width="64" height="12" rx="2" fill="#f4efe4"/>
+        <text x="400" y="287" class="al" text-anchor="middle">REMEDIATION</text>
+
+        <!-- 4 pipeline → Groq: pseudonymised prompt (headline) -->
+        <line x1="616" y1="336" x2="616" y2="250" stroke="#1f3bff" stroke-width="1.4" marker-end="url(#spearsim-data-boundaries-arrow-accent)"/>
+        <rect x="540" y="278" width="68" height="12" rx="2" fill="#f4efe4"/>
+        <text x="574" y="287" class="al" text-anchor="middle" style="fill:#1f3bff">ALIAS + ROLE</text>
+
+        <!-- 5 Groq → pipeline (response) -->
+        <line x1="648" y1="248" x2="648" y2="334" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="656" y="278" width="80" height="12" rx="2" fill="#f4efe4"/>
+        <text x="696" y="287" class="al" text-anchor="middle">SUBJECT + HTML</text>
+
+        <!-- 6 pipeline → SendGrid -->
+        <line x1="768" y1="336" x2="768" y2="250" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="776" y="278" width="56" height="12" rx="2" fill="#f4efe4"/>
+        <text x="804" y="287" class="al" text-anchor="middle">TO + HTML</text>
+
+        <!-- 7 SendGrid → employee inbox -->
+        <path d="M 992 196 L 1224 196 Q 1232 196 1232 204 L 1232 334" fill="none" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="1080" y="176" width="64" height="12" rx="2" fill="#f4efe4"/>
+        <text x="1112" y="185" class="al" text-anchor="middle">SIMULATION</text>
+
+        <!-- 8 employee → tracking -->
+        <line x1="1144" y1="384" x2="1102" y2="384" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="1108" y="364" width="32" height="12" rx="2" fill="#f4efe4"/>
+        <text x="1124" y="373" class="al" text-anchor="middle">UUID</text>
+
+        <!-- 10 API → Postgres -->
+        <line x1="380" y1="540" x2="380" y2="626" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="308" y="568" width="64" height="12" rx="2" fill="#f4efe4"/>
+        <text x="340" y="577" class="al" text-anchor="middle">CSV ROWS</text>
+
+        <!-- 3 Postgres → pipeline (reads employees incl. email) -->
+        <line x1="680" y1="628" x2="680" y2="506" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="688" y="568" width="76" height="12" rx="2" fill="#f4efe4"/>
+        <text x="726" y="577" class="al" text-anchor="middle">EMPLOYEE ROWS</text>
+
+        <!-- 9 tracking → Postgres -->
+        <line x1="980" y1="520" x2="980" y2="626" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <rect x="988" y="568" width="72" height="12" rx="2" fill="#f4efe4"/>
+        <text x="1024" y="577" class="al" text-anchor="middle">EVENTS · QUIZ</text>
+
+        <!-- 12 retention → Postgres -->
+        <line x1="224" y1="684" x2="258" y2="684" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+
+        <!-- =================================================================
+             NODES
+             ================================================================= -->
+
+        <!-- Admin console (person / input) -->
+        <rect x="40" y="336" width="176" height="96" rx="20" fill="#f4efe4"/>
+        <rect x="40" y="336" width="176" height="96" rx="20" fill="#474a57" stroke="#5b5e6a" stroke-width="1" fill-opacity="0.10"/>
+        <text x="128" y="366" class="nm" text-anchor="middle">Admin console</text>
+        <text x="128" y="382" class="sb" text-anchor="middle">React · Supabase Auth</text>
+        <text x="128" y="400" class="ln" text-anchor="middle">JWT → 3 roles</text>
+        <text x="128" y="416" class="ln" text-anchor="middle">ethical-use terms gate</text>
+
+        <!-- Groq (third party) -->
+        <rect x="380" y="148" width="320" height="100" rx="6" fill="#f4efe4"/>
+        <rect x="380" y="148" width="320" height="100" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <rect x="388" y="156" width="76" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.30"/>
+        <text x="426" y="165" class="tg" text-anchor="middle" fill="#474a57">STEPS 04 · 08</text>
+        <text x="392" y="190" class="nm">Groq</text>
+        <text x="392" y="206" class="sb">llama-3.3-70b-versatile (GROQ_MODEL default)</text>
+        <text x="392" y="224" class="ln">subject + HTML body · remediation advice</text>
+
+        <!-- SendGrid (third party) -->
+        <rect x="752" y="148" width="240" height="100" rx="6" fill="#f4efe4"/>
+        <rect x="752" y="148" width="240" height="100" rx="6" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <rect x="760" y="156" width="44" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.30"/>
+        <text x="782" y="165" class="tg" text-anchor="middle" fill="#474a57">STEP 05</text>
+        <text x="764" y="190" class="nm">SendGrid</text>
+        <text x="764" y="206" class="sb">POST /v3/mail/send</text>
+        <text x="764" y="224" class="ln">X-PhishSim-Authorized header</text>
+        <text x="764" y="238" class="ln">own open/click tracking off</text>
+
+        <!-- Campaign & GDPR API (FOCAL) -->
+        <rect x="266" y="342" width="240" height="204" rx="6" fill="url(#spearsim-data-boundaries-checker)" opacity="0.22"/>
+        <rect x="260" y="336" width="240" height="204" rx="6" fill="#f4efe4"/>
+        <rect x="260" y="336" width="240" height="204" rx="6" fill="#1f3bff" stroke="#1f3bff" stroke-width="1.2" fill-opacity="0.07"/>
+        <rect x="268" y="344" width="92" height="12" rx="2" fill="none" stroke="#1f3bff" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="314" y="353" class="tg" text-anchor="middle" fill="#1f3bff">STEPS 01–03 · 08</text>
+        <text x="272" y="378" class="nm">Campaign &amp; GDPR API</text>
+        <text x="272" y="394" class="sb">routes/campaigns, employees, gdpr</text>
+        <text x="272" y="416" class="ln">CSV email must match org domain</text>
+        <text x="272" y="432" class="ln">Employee_XXXX alias per row</text>
+        <text x="272" y="448" class="ln">launch requires consent_signed</text>
+        <rect x="464" y="439" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="475" y="448" class="tg" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="272" y="464" class="ln">erasure by alias (admin role)</text>
+        <text x="272" y="480" class="ln">audit row per console action</text>
+        <text x="272" y="496" class="ln">risk: cred High · click Medium</text>
+        <text x="272" y="512" class="ln">report advice regenerated per view</text>
+
+        <!-- Email pipeline -->
+        <rect x="560" y="336" width="240" height="168" rx="6" fill="#f4efe4"/>
+        <rect x="560" y="336" width="240" height="168" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <rect x="568" y="344" width="64" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.40"/>
+        <text x="600" y="353" class="tg" text-anchor="middle" fill="#14161e">STEPS 04–05</text>
+        <text x="572" y="378" class="nm">Email pipeline</text>
+        <text x="572" y="394" class="sb">Celery task · inline fallback</text>
+        <text x="572" y="416" class="ln">Groq: ≤ 5 employees at once</text>
+        <text x="572" y="432" class="ln">HTML sanitised by bleach</text>
+        <text x="572" y="448" class="ln">+ open pixel, click link</text>
+        <text x="572" y="464" class="ln">SendGrid: ≤ 10 at once</text>
+        <text x="572" y="480" class="ln">failed generations skipped</text>
+
+        <!-- Tracking endpoints -->
+        <rect x="860" y="336" width="240" height="184" rx="6" fill="#f4efe4"/>
+        <rect x="860" y="336" width="240" height="184" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <rect x="868" y="344" width="64" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.40"/>
+        <text x="900" y="353" class="tg" text-anchor="middle" fill="#14161e">STEPS 06–07</text>
+        <text x="872" y="378" class="nm">Tracking endpoints</text>
+        <text x="872" y="394" class="sb">public · no auth · 3 rate-limited</text>
+        <text x="872" y="416" class="lk">GET</text><text x="908" y="416" class="ln">/track/open/{uuid}</text>
+        <text x="872" y="432" class="lk">GET</text><text x="908" y="432" class="ln">/track/click/{uuid}</text>
+        <text x="872" y="448" class="lk">POST</text><text x="908" y="448" class="ln">/track/cred/{uuid}</text>
+        <rect x="1030" y="439" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="1041" y="448" class="tg" text-anchor="middle" fill="#14161e">L3</text>
+        <text x="872" y="464" class="lk">POST</text><text x="908" y="464" class="ln">/api/track/quiz/{uuid}</text>
+        <text x="872" y="488" class="ln">stores event, IP, user agent</text>
+        <text x="872" y="504" class="ln">first event per type only</text>
+
+        <!-- Employee (person) -->
+        <rect x="1144" y="336" width="176" height="124" rx="20" fill="#f4efe4"/>
+        <rect x="1144" y="336" width="176" height="124" rx="20" fill="#474a57" stroke="#5b5e6a" stroke-width="1" fill-opacity="0.10"/>
+        <text x="1232" y="364" class="nm" text-anchor="middle">Employee</text>
+        <text x="1232" y="380" class="sb" text-anchor="middle">inbox → /phish/{uuid}</text>
+        <text x="1232" y="400" class="ln" text-anchor="middle">no form data sent</text>
+        <text x="1232" y="416" class="ln" text-anchor="middle">awareness red flags</text>
+        <text x="1232" y="432" class="ln" text-anchor="middle">3-question quiz</text>
+        <text x="1232" y="448" class="ln" text-anchor="middle">score set in browser</text>
+
+        <!-- Retention Edge Function -->
+        <rect x="48" y="628" width="176" height="116" rx="6" fill="#f4efe4"/>
+        <rect x="48" y="628" width="176" height="116" rx="6" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="60" y="654" class="nm">retention-cleanup</text>
+        <text x="60" y="670" class="sb">Supabase Edge Function</text>
+        <text x="60" y="692" class="ln">deletes campaigns past</text>
+        <text x="60" y="708" class="ln">auto_delete_at (+90 d)</text>
+        <text x="60" y="726" class="ln">cron set in dashboard</text>
+
+        <!-- Supabase Postgres (store) -->
+        <rect x="260" y="628" width="840" height="116" rx="6" fill="#f4efe4"/>
+        <rect x="260" y="628" width="840" height="116" rx="6" fill="#14161e" stroke="#474a57" stroke-width="1" fill-opacity="0.05"/>
+        <rect x="272" y="637" width="38" height="12" rx="2" fill="none" stroke="#474a57" stroke-width="0.8" stroke-opacity="0.50"/>
+        <text x="291" y="646" class="tg" text-anchor="middle" fill="#474a57">STORE</text>
+        <text x="320" y="648" class="nm">Supabase Postgres</text>
+        <text x="458" y="648" class="sb">· backend uses the service-role key</text>
+        <line x1="272" y1="664" x2="1088" y2="664" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.12"/>
+
+        <text x="272" y="688" class="lk">campaigns</text><text x="368" y="688" class="ln">consent_signed · auto_delete_at</text>
+        <text x="272" y="706" class="lk">employees</text><text x="368" y="706" class="ln">alias · email · role · uuid</text>
+        <rect x="548" y="697" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="559" y="706" class="tg" text-anchor="middle" fill="#14161e">L4</text>
+        <text x="272" y="724" class="lk">name_map</text><text x="368" y="724" class="ln">alias → real_name (TEXT)</text>
+        <rect x="528" y="715" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="539" y="724" class="tg" text-anchor="middle" fill="#14161e">L2</text>
+
+        <text x="688" y="688" class="lk">events</text><text x="784" y="688" class="ln">type · IP · user agent</text>
+        <text x="688" y="706" class="lk">quiz_results</text><text x="784" y="706" class="ln">score 0–3 · answers</text>
+        <text x="688" y="724" class="lk">audit_logs</text><text x="784" y="724" class="ln">actor · action · IP · metadata</text>
+
+        <!-- Editorial callouts (open column) -->
+        <line x1="1144" y1="500" x2="1144" y2="572" stroke="#14161e" stroke-width="1"/>
+        <text x="1156" y="514" class="co">Groq never receives a name</text>
+        <text x="1156" y="532" class="co">or email: prompts carry the</text>
+        <text x="1156" y="550" class="co">alias, the CSV role and the</text>
+        <text x="1156" y="568" class="co">organisation name.</text>
+
+        <line x1="1144" y1="612" x2="1144" y2="684" stroke="#14161e" stroke-width="1"/>
+        <text x="1156" y="626" class="co">The fake login posts no</text>
+        <text x="1156" y="644" class="co">form fields. Requests carry</text>
+        <text x="1156" y="662" class="co">the tracking UUID; the quiz</text>
+        <text x="1156" y="680" class="co">adds its score and answers.</text>
+
+        <!-- =================================================================
+             VERIFIED LIMITS LEDGER
+             ================================================================= -->
+        <line x1="40" y1="788" x2="1320" y2="788" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.14"/>
+        <text x="40" y="810" class="eb">VERIFIED LIMITS · FOUND IN CODE, NOT STATED IN THE README</text>
+
+        <rect x="40" y="826" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="51" y="835" class="tg" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="72" y="836" class="ld">Launch checks consent_signed only. The authorisation-PDF download</text>
+        <text x="72" y="852" class="ld">is required by the browser wizard, not by the API.</text>
+
+        <rect x="700" y="826" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="711" y="835" class="tg" text-anchor="middle" fill="#14161e">L2</text>
+        <text x="732" y="836" class="ld">name_map.real_name is a plain TEXT column. The Supabase Vault</text>
+        <text x="732" y="852" class="ld">encryption mentioned in comments is not set up in the repository.</text>
+
+        <rect x="40" y="868" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="51" y="877" class="tg" text-anchor="middle" fill="#14161e">L3</text>
+        <text x="72" y="878" class="ld">The phish page posts to /api/track/cred, but the backend route is</text>
+        <text x="72" y="894" class="ld">/track/cred, so credential events may go unrecorded (static analysis).</text>
+
+        <rect x="700" y="868" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="711" y="877" class="tg" text-anchor="middle" fill="#14161e">L4</text>
+        <text x="732" y="878" class="ld">RLS policies let the anon role SELECT every employees row,</text>
+        <text x="732" y="894" class="ld">including email addresses. The backend bypasses RLS entirely.</text>
+
+        <!-- =================================================================
+             LEGEND
+             ================================================================= -->
+        <line x1="40" y1="916" x2="1320" y2="916" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.12"/>
+        <text x="40" y="944" class="eb">LEGEND</text>
+
+        <rect x="112" y="935" width="22" height="12" rx="6" fill="#474a57" stroke="#5b5e6a" stroke-width="1" fill-opacity="0.10"/>
+        <text x="140" y="944" class="lg">Person</text>
+
+        <rect x="196" y="935" width="16" height="12" rx="2" fill="#fffcf5" stroke="#14161e" stroke-width="1"/>
+        <text x="218" y="944" class="lg">SpearSim service</text>
+
+        <rect x="316" y="935" width="16" height="12" rx="2" fill="#1f3bff" stroke="#1f3bff" stroke-width="1.2" fill-opacity="0.07"/>
+        <text x="338" y="944" class="lg">Where the controls live</text>
+
+        <rect x="468" y="935" width="16" height="12" rx="2" fill="#14161e" stroke="#14161e" stroke-width="1" fill-opacity="0.03" stroke-opacity="0.40"/>
+        <text x="490" y="944" class="lg">Third-party API</text>
+
+        <rect x="582" y="935" width="16" height="12" rx="2" fill="#14161e" stroke="#474a57" stroke-width="1" fill-opacity="0.05"/>
+        <text x="604" y="944" class="lg">Data store</text>
+
+        <rect x="672" y="935" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.28"/>
+        <text x="700" y="944" class="lg">Trust zone</text>
+
+        <line x1="770" y1="941" x2="794" y2="941" stroke="#1f3bff" stroke-width="1.4" marker-end="url(#spearsim-data-boundaries-arrow-accent)"/>
+        <text x="802" y="944" class="lg">Pseudonymised prompt</text>
+
+        <line x1="928" y1="941" x2="952" y2="941" stroke="#474a57" stroke-width="1.2" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <text x="960" y="944" class="lg">Data flow</text>
+
+        <line x1="1028" y1="941" x2="1052" y2="941" stroke="#474a57" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#spearsim-data-boundaries-arrow)"/>
+        <text x="1060" y="944" class="lg">Response</text>
+
+        <rect x="1124" y="935" width="22" height="12" rx="2" fill="none" stroke="#14161e" stroke-width="0.8" stroke-opacity="0.55"/>
+        <text x="1135" y="944" class="tg" text-anchor="middle" fill="#14161e">L1</text>
+        <text x="1152" y="944" class="lg">Verified limit</text>
+      </svg>

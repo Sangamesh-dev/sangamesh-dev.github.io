@@ -1,0 +1,580 @@
+{
+  "_note": "Single source of truth for project content. Edit this file, then run: python scripts/build.py  (regenerates work/*.html and the project sections of index.html between the GEN markers).",
+  "projects": [
+    {
+      "slug": "zeroinject-shield",
+      "name": "ZeroInject Shield",
+      "kind": "LLM security",
+      "status": "Completed",
+      "categories": [
+        "llm"
+      ],
+      "featured": true,
+      "chapter": {
+        "bg": "#0a3149",
+        "fg": "#f4f1ea",
+        "bubble": "This is ZeroInject Shield. Before a chat message reaches the model, three LLMs score it and a policy decides: block, sanitize or allow."
+      },
+      "tagline": "Multi-LLM screening for prompt injection in a chat app.",
+      "summary": "Middleware that sanitizes each chat message, scores it with three weighted LLM verifiers, then blocks, sanitizes or allows it.",
+      "description": "A FastAPI middleware in front of a demo shop chatbot. An LLM first extracts the legitimate request from each message and blocks it outright if nothing legitimate remains. Three Groq-hosted verifiers (Llama 3.3 70B, Llama 3.1 8B and Qwen3 32B) then score the original text, their weighted consensus maps to BLOCK, SANITIZE or ALLOW, and rule-based overrides handle known attack phrases. Every decision is logged to SQLite and shown on a React dashboard.",
+      "problem": "Prompt injection",
+      "built": "FastAPI, React, Groq",
+      "result": "Block, sanitize or allow",
+      "pipeline": [
+        [
+          "Sanitize",
+          "An LLM extracts the legitimate request; if none is left, the message is blocked"
+        ],
+        [
+          "Verify",
+          "Three LLM verifiers score the original message"
+        ],
+        [
+          "Consensus",
+          "Weighted score across the three (0.35, 0.40, 0.25)"
+        ],
+        [
+          "Policy",
+          "0.70 or more blocks, 0.40 or more sanitizes, otherwise allow; rule overrides on top"
+        ],
+        [
+          "Log",
+          "Every decision is written to SQLite for the dashboard"
+        ]
+      ],
+      "stack": [
+        "LLM security",
+        "FastAPI",
+        "React",
+        "Groq API",
+        "SQLite",
+        "Multi-agent"
+      ],
+      "image": "images/ZeroInject_Shield.png",
+      "w": 2172,
+      "h": 724,
+      "alt": "ZeroInject Shield pipeline diagram: input, sanitize, verify, consensus and policy check stages ending in blocked or safe",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Sangamesh-dev/ZeroInject"
+        },
+        {
+          "label": "Write-up on dev.to",
+          "url": "https://dev.to/sangamesh_dandin/prompt-injection-is-the-new-sql-injection-heres-the-system-we-built-to-stop-it-3cg8"
+        }
+      ],
+      "work": [
+        "Built the FastAPI middleware: LLM sanitization, an early block when no legitimate request remains, and enforcement before the chatbot is ever called.",
+        "Built the weighted three-model verifier ensemble on the Groq API and the threshold policy that turns its score into block, sanitize or allow.",
+        "Added rule-based overrides with a re-check of sanitized text, and SQLite logging behind a React analytics dashboard."
+      ],
+      "diagram": {
+        "source": "Architecture/zeroinject-diagram/zeroinject-secure-chat-flow.svg",
+        "commit": "f838bbb"
+      },
+      "video": {
+        "src": "images/video/zeroinject-shield.mp4",
+        "poster": "images/video/zeroinject-shield.jpg",
+        "note": "An animated walkthrough of the interface, not a screen recording. The scores and confidences shown are example values, not measurements."
+      },
+      "chapter_layout": "showcase"
+    },
+    {
+      "slug": "redteam-copilot",
+      "name": "RedTeam Copilot AI",
+      "kind": "Pentest automation",
+      "status": "Completed",
+      "categories": [
+        "llm",
+        "tooling"
+      ],
+      "featured": true,
+      "chapter": {
+        "bg": "#e8462a",
+        "fg": "#16130f",
+        "bubble": "Next, RedTeam Copilot. It chains recon, port scanning and CVE matching, then writes the pentest report itself."
+      },
+      "tagline": "An automated recon-to-report pentest assistant.",
+      "summary": "Runs OSINT, an nmap service scan and NVD CVE lookups, then has an LLM write the findings up as a PDF report.",
+      "description": "A FastAPI service that automates the recon-to-report part of a penetration test in four fixed stages: OSINT (DNS records, a subdomain wordlist, crt.sh and WHOIS), an nmap service scan, CVE lookups against the NVD with CISA KEV escalation, and a Groq-written report rendered as a PDF and stored in Supabase. A React front end streams progress as the scan runs. CVE matches are keyword lookups to review, not confirmed vulnerabilities.",
+      "problem": "Slow manual recon",
+      "built": "FastAPI, Groq, nmap",
+      "result": "PDF pentest reports",
+      "pipeline": [
+        [
+          "OSINT",
+          "DNS records, a subdomain wordlist, crt.sh and WHOIS"
+        ],
+        [
+          "Port scan",
+          "nmap service scan of the top 1,000 ports"
+        ],
+        [
+          "CVE match",
+          "NVD keyword lookup; CISA KEV entries escalate to critical"
+        ],
+        [
+          "Report",
+          "Groq writes it up; ReportLab renders the PDF"
+        ]
+      ],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Groq",
+        "nmap",
+        "NVD API",
+        "Supabase",
+        "React"
+      ],
+      "image": "images/RedTeam_Copilot.png",
+      "w": 1774,
+      "h": 887,
+      "alt": "RedTeam Copilot AI terminal run showing OSINT, port scan, CVE match and PDF report stages",
+      "links": [
+        {
+          "label": "Live demo",
+          "url": "https://redteam-copilot.vercel.app"
+        },
+        {
+          "label": "Source",
+          "url": "https://github.com/Sangamesh-dev/redteam-copilot"
+        }
+      ],
+      "work": [
+        "Built the four-stage pipeline as a FastAPI background task, streaming live progress to the React UI over server-sent events.",
+        "Implemented OSINT (DNS, crt.sh, WHOIS and a subdomain wordlist), nmap service scanning, and NVD CVE lookups with CISA KEV escalation.",
+        "Generated PDF reports with ReportLab from Groq-written analysis, stored in Supabase."
+      ],
+      "diagram": {
+        "source": "Architecture/redteam-copilot-diagram/redteam-copilot-control-map.svg",
+        "commit": "e283b6c"
+      },
+      "video": {
+        "src": "images/video/redteam-copilot.mp4",
+        "poster": "images/video/redteam-copilot.jpg",
+        "note": "An animated walkthrough of the interface, not a screen recording. The target, findings and timings shown are example values, not a real scan."
+      },
+      "chapter_layout": "showcase"
+    },
+    {
+      "slug": "bytehunter",
+      "name": "ByteHunter",
+      "kind": "Malware ML",
+      "status": "Completed",
+      "categories": [
+        "ml"
+      ],
+      "featured": true,
+      "chapter": {
+        "bg": "#16130f",
+        "fg": "#f4f1ea",
+        "bubble": "ByteHunter triages a file: one LightGBM score decides safe, suspicious or malicious, and other models add context."
+      },
+      "tagline": "Malware triage for Windows executables, with one model deciding the verdict.",
+      "summary": "Scores uploaded files with a pre-trained EMBER LightGBM model, maps the score to safe, suspicious or malicious, and adds context from other models.",
+      "description": "A FastAPI and React malware-triage app. Uploaded files are hashed and cached by SHA-256, parsed with LIEF into a 2,381-value feature vector and scored by the pre-trained EMBER 2018 LightGBM model. One threshold scale turns that score into SAFE, SUSPICIOUS or MALICIOUS, with a heuristic scorer as the fallback when the model isn't available. Random Forest and Logistic Regression add an agreement check, an XGBoost model trained on Microsoft BIG-2015 suggests a malware family for high scores, and SHAP-based explanations are summarised as text. Results are stored in SQLite and exported as PDF reports.",
+      "problem": "Malware triage",
+      "built": "LightGBM, LIEF, FastAPI",
+      "result": "Safe / suspicious / malicious",
+      "pipeline": [
+        [
+          "Cache",
+          "A SHA-256 lookup returns earlier results instantly"
+        ],
+        [
+          "Features",
+          "LIEF parses the file into a 2,381-value vector"
+        ],
+        [
+          "Score",
+          "Pre-trained LightGBM sets the verdict, with a heuristic fallback"
+        ],
+        [
+          "Annotate",
+          "Agreement models, the XGBoost family and SHAP add context"
+        ],
+        [
+          "Store",
+          "SQLite history and PDF reports"
+        ]
+      ],
+      "stack": [
+        "Python",
+        "LightGBM",
+        "LIEF",
+        "XGBoost",
+        "SHAP",
+        "FastAPI",
+        "React",
+        "Docker"
+      ],
+      "image": "images/ByteHunter.png",
+      "w": 1774,
+      "h": 887,
+      "alt": "ByteHunter architecture: SHA-256 cache, LIEF features and LightGBM scoring into safe, suspicious or malicious",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Sangamesh-dev/ByteHunter"
+        }
+      ],
+      "work": [
+        "Built the scan API: batch upload, SHA-256 caching, LIEF feature extraction into a 2,381-value vector, and verdict thresholds on the LightGBM score.",
+        "Trained an XGBoost family classifier on Microsoft BIG-2015 and Random Forest and Logistic Regression comparison models, and added SHAP-based explanations.",
+        "Added a heuristic fallback scorer, SQLite scan history and ReportLab PDF reports."
+      ],
+      "diagram": {
+        "source": "Architecture/bytehunter-diagram/bytehunter-verdict-anatomy.svg",
+        "commit": "3e86d53"
+      },
+      "video": {
+        "src": "images/video/bytehunter.mp4",
+        "poster": "images/video/bytehunter.jpg",
+        "note": "An animated walkthrough of the interface, not a screen recording. The file, score and findings shown are example values, not a real scan."
+      },
+      "chapter_layout": "showcase"
+    },
+    {
+      "slug": "spearsim",
+      "name": "SpearSim",
+      "kind": "Phishing simulation",
+      "status": "Completed",
+      "categories": [
+        "llm",
+        "tooling"
+      ],
+      "featured": true,
+      "chapter": {
+        "bg": "#c4b5f4",
+        "fg": "#16130f",
+        "bubble": "SpearSim runs a phishing simulation end to end: tailored emails, tracking, then training for whoever clicked."
+      },
+      "tagline": "Privacy-minded phishing simulations with follow-up training.",
+      "summary": "Writes role-specific phishing emails with an LLM using only pseudonyms, tracks opens and clicks, then trains whoever fell for it.",
+      "description": "A phishing-simulation platform for security-awareness programmes. Employees are imported from a CSV checked against the organisation's domain and given pseudonymous aliases, so the LLM (Groq) only ever sees an alias and a role, never a name or address. An admin must record consent before a campaign can launch. Emails go out through SendGrid, opens and clicks are tracked by UUID, and anyone caught gets a short awareness quiz. It also has role-based access, audit logging, erasure by alias and automatic deletion of campaign data after 90 days.",
+      "problem": "Phishing risk",
+      "built": "React, FastAPI, Supabase",
+      "result": "End-to-end campaigns",
+      "pipeline": [
+        [
+          "Consent",
+          "An admin records consent before a campaign can launch"
+        ],
+        [
+          "Generate",
+          "Groq writes each email from an alias and a role, never a name"
+        ],
+        [
+          "Send & track",
+          "SendGrid delivers; opens and clicks are tracked by UUID"
+        ],
+        [
+          "Train",
+          "Scenario red flags and a short awareness quiz"
+        ]
+      ],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "Supabase",
+        "Groq",
+        "SendGrid",
+        "Celery"
+      ],
+      "image": "images/SpearSim.png",
+      "w": 1672,
+      "h": 941,
+      "alt": "SpearSim dashboard with campaign performance, live activity feed and employee risk breakdown",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Sangamesh-dev/SpearSim"
+        }
+      ],
+      "work": [
+        "Designed the privacy model: domain-checked CSV import, pseudonymous aliases, and LLM prompts that carry only an alias and a role.",
+        "Built Supabase auth with three roles, a consent gate before launch, audit logging, erasure by alias and 90-day retention cleanup.",
+        "Built the email pipeline (Groq generation and SendGrid delivery through Celery, with an inline fallback), the tracking endpoints and the awareness quiz."
+      ],
+      "diagram": {
+        "source": "Architecture/spearsim-diagram/spearsim-data-boundaries.svg",
+        "commit": "dcdd0c0"
+      },
+      "video": {
+        "src": "images/video/spearsim.mp4",
+        "poster": "images/video/spearsim.jpg",
+        "note": "An animated walkthrough of the interface, not a screen recording. The company, people and emails shown are fictional examples."
+      },
+      "chapter_layout": "showcase"
+    },
+    {
+      "slug": "triageai",
+      "name": "TriageAI",
+      "kind": "SOC automation",
+      "status": "In progress",
+      "categories": [
+        "llm"
+      ],
+      "featured": false,
+      "tagline": "LLM-assisted SOC alert triage with MITRE ATT&CK mapping.",
+      "summary": "Groups duplicate SIEM alerts with FAISS, maps them to MITRE ATT&CK and ranks them with an LLM.",
+      "description": "A triage assistant for security analysts. It ingests SIEM alerts, groups near-duplicates with FAISS vector search, maps each one to MITRE ATT&CK techniques and has Groq's llama-3.3-70b score and prioritise them. Results appear in a React, Vite and FastAPI dashboard. Still in development.",
+      "problem": "Noisy SOC alerts",
+      "built": "React, FastAPI, FAISS",
+      "result": "Prioritised triage queue",
+      "pipeline": [
+        [
+          "Ingest",
+          "Pull in SIEM alerts"
+        ],
+        [
+          "Deduplicate",
+          "FAISS vector search groups near-duplicate alerts"
+        ],
+        [
+          "Map",
+          "Map alerts to MITRE ATT&CK techniques"
+        ],
+        [
+          "Score",
+          "Groq llama-3.3-70b scores and prioritises"
+        ]
+      ],
+      "stack": [
+        "LLM",
+        "FAISS",
+        "MITRE ATT&CK",
+        "Groq",
+        "React",
+        "FastAPI"
+      ],
+      "image": "images/TriageAI.png",
+      "w": 1774,
+      "h": 887,
+      "alt": "TriageAI dashboard preview with prioritised SIEM alerts",
+      "links": [],
+      "note": "Code not public yet"
+    },
+    {
+      "slug": "mailguard-ai",
+      "name": "MailGuard AI",
+      "kind": "Email security",
+      "status": "Completed",
+      "categories": [
+        "ml"
+      ],
+      "featured": false,
+      "tagline": "Gmail impersonation detection with SPF, DKIM and DMARC checks.",
+      "summary": "A Gmail Chrome extension pairing a writing-style classifier with live SPF, DKIM and DMARC checks.",
+      "description": "A Chrome extension for Gmail that flags likely impersonation. It pairs a stylometric (writing-style) classifier, trained on the Enron email corpus, with real-time SPF, DKIM and DMARC validation. Backend in FastAPI.",
+      "problem": "Email impersonation",
+      "built": "NLP, Chrome Extension",
+      "result": "72% accuracy · 84% impostor precision",
+      "pipeline": [
+        [
+          "Train",
+          "Stylometric classifier trained on the Enron corpus"
+        ],
+        [
+          "Integrate",
+          "Chrome extension inside Gmail"
+        ],
+        [
+          "Validate",
+          "Real-time SPF, DKIM and DMARC checks"
+        ]
+      ],
+      "stack": [
+        "NLP",
+        "Stylometry",
+        "SPF/DKIM/DMARC",
+        "Chrome Extension",
+        "FastAPI"
+      ],
+      "image": "images/MailGuard_AI.png",
+      "w": 1774,
+      "h": 887,
+      "alt": "MailGuard AI Gmail extension preview",
+      "links": [],
+      "note": "Code not public yet"
+    },
+    {
+      "slug": "zerotrace-ai",
+      "name": "ZeroTrace AI",
+      "kind": "Threat intelligence",
+      "status": "Completed",
+      "categories": [
+        "ml"
+      ],
+      "featured": false,
+      "tagline": "Threat intelligence with exploit prediction.",
+      "summary": "Pulls CVEs from NVD, CISA KEV and ExploitDB and ranks them by predicted exploit likelihood.",
+      "description": "A threat-intelligence platform that merges CVE feeds from NVD, CISA KEV and ExploitDB into one risk-ranked view. An XGBoost model estimates how likely each vulnerability is to be exploited, the Groq API summarises advisories, and FAISS powers semantic search. Streamlit, FastAPI, PostgreSQL and Docker.",
+      "built": "XGBoost, FAISS",
+      "result": "Exploit risk ranking",
+      "pipeline": [
+        [
+          "Ingest",
+          "CVEs from NVD, CISA KEV and ExploitDB"
+        ],
+        [
+          "Predict",
+          "XGBoost estimates exploit probability"
+        ],
+        [
+          "Summarise",
+          "Groq API summarises advisories"
+        ],
+        [
+          "Search",
+          "FAISS vector search across the corpus"
+        ]
+      ],
+      "stack": [
+        "XGBoost",
+        "FAISS",
+        "CVE",
+        "Streamlit",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "image": "images/ZeroTrace_AI.png",
+      "w": 1536,
+      "h": 1024,
+      "alt": "ZeroTrace AI threat intelligence dashboard",
+      "links": [],
+      "note": "Code not public yet",
+      "problem": "CVE overload",
+      "work": [
+        "Built ingestion for CVE feeds from NVD, CISA KEV and ExploitDB into one risk-ranked pipeline.",
+        "Trained the XGBoost exploit-prediction model on CVSS score, exploit availability, CWE category and vendor data.",
+        "Added FAISS semantic CVE search and Groq-generated advisory summaries."
+      ]
+    },
+    {
+      "slug": "predictive-patch-scheduler",
+      "name": "Predictive Patch Scheduler",
+      "kind": "Vulnerability management",
+      "status": "Completed",
+      "categories": [
+        "ml"
+      ],
+      "featured": false,
+      "tagline": "Patch scheduling from rule-based and ML risk scores.",
+      "summary": "Scores vulnerabilities with a CVSS-based rule and an ML model, then schedules each patch by priority.",
+      "description": "A FastAPI app that turns vulnerability records (entered by hand, uploaded as CSV or JSON, or generated as sample data) into a patch schedule. A deterministic rule scores risk from CVSS, exploit availability and system criticality. An optional ML path (Random Forest for risk, Gradient Boosting for priority) is trained on synthetic data labelled by the same rule, so it approximates the rule rather than replacing it. Priority sets the patch window, from 24 hours for critical to 14 days for low, and a dashboard shows Plotly analytics with WebSocket alerts.",
+      "problem": "Patch prioritisation",
+      "built": "FastAPI, scikit-learn",
+      "result": "Priority-based schedule",
+      "pipeline": [
+        [
+          "Input",
+          "Records from a form, a CSV or JSON upload, or sample data"
+        ],
+        [
+          "Rule score",
+          "CVSS, exploit availability and system criticality"
+        ],
+        [
+          "ML score",
+          "Random Forest for risk, Gradient Boosting for priority"
+        ],
+        [
+          "Schedule",
+          "Critical in 24 h, high in 3 days, medium in 7, low in 14"
+        ]
+      ],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "scikit-learn",
+        "SQLite",
+        "Plotly",
+        "WebSockets"
+      ],
+      "image": "images/Predictive_Patch.png",
+      "w": 1536,
+      "h": 1024,
+      "alt": "Predictive Patch Scheduler dashboard",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Sangamesh-dev/Predictive-Patch-Scheduler"
+        }
+      ],
+      "diagram": {
+        "source": "Architecture/predictive-patch-scheduler-diagram/pps-risk-to-schedule.svg",
+        "commit": "2be5d9e"
+      },
+      "video": {
+        "src": "images/video/predictive-patch-scheduler.mp4",
+        "poster": "images/video/predictive-patch-scheduler.jpg",
+        "note": "An animated walkthrough of the interface, not a screen recording. The systems, CVEs and scores shown are example values. The video uses the app's own name, PatchGuard."
+      }
+    },
+    {
+      "slug": "vulnxploit-scanner",
+      "name": "VulnXploit Scanner",
+      "kind": "Web security tooling",
+      "status": "Completed",
+      "categories": [
+        "tooling"
+      ],
+      "featured": false,
+      "tagline": "A small web front end for nmap service scans.",
+      "summary": "Runs an nmap scan of 12 common ports from the browser, flags known CVEs for SSH, HTTP and MySQL, and exports the results.",
+      "description": "A Flask app with a vanilla-JavaScript front end. It runs nmap against 12 common ports, looks each detected service up in a small built-in table of known CVEs (SSH, HTTP and MySQL), shows a proof-of-concept template for those entries and exports results as a PDF or CSV. It's deliberately simple: the CVE table is built in, and the proof-of-concept templates are text, not exploits.",
+      "problem": "Quick service checks",
+      "built": "Python, Flask, nmap",
+      "result": "PDF and CSV scan reports",
+      "pipeline": [
+        [
+          "Scan",
+          "nmap on 12 common ports"
+        ],
+        [
+          "Match",
+          "A built-in CVE table for SSH, HTTP and MySQL"
+        ],
+        [
+          "Template",
+          "Proof-of-concept templates, as text"
+        ],
+        [
+          "Export",
+          "A PDF or CSV report of the results"
+        ]
+      ],
+      "stack": [
+        "Python",
+        "Flask",
+        "nmap",
+        "ReportLab",
+        "Bootstrap"
+      ],
+      "image": "images/VulnXploit.png",
+      "w": 1586,
+      "h": 992,
+      "alt": "VulnXploit scanner terminal output",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Sangamesh-dev/VulnXploit"
+        }
+      ],
+      "diagram": {
+        "source": "Architecture/vulnxploit-diagram/vulnxploit-request-map.svg",
+        "commit": "a7f2c5f"
+      },
+      "video": {
+        "src": "images/video/vulnxploit-scanner.mp4",
+        "poster": "images/video/vulnxploit-scanner.jpg",
+        "note": "An animated walkthrough of the interface, not a screen recording. The target and results shown are example values. The video uses the app's own title, VulnScan Pro."
+      }
+    }
+  ]
+}
